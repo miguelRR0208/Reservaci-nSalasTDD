@@ -1,0 +1,20 @@
+E
+======================================================================
+ERROR: tests_reglas (unittest.loader._FailedTest.tests_reglas)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests_reglas
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\unittest\loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_reglas.py", line 7, in <module>
+    from reservaciones import reglas
+ImportError: cannot import name 'reglas' from 'reservaciones' (C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+Found 1 test(s).
+System check identified no issues (0 silenced).
