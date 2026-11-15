@@ -1,0 +1,20 @@
+E
+======================================================================
+ERROR: tests_disponibilidad (unittest.loader._FailedTest.tests_disponibilidad)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests_disponibilidad
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\unittest\loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_disponibilidad.py", line 6, in <module>
+    from reservaciones.disponibilidad import (
+ModuleNotFoundError: No module named 'reservaciones.disponibilidad'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+Found 1 test(s).
+System check identified no issues (0 silenced).
