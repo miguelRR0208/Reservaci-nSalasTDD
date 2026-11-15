@@ -218,3 +218,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Base de datos temporal de pruebas
+test_db.sqlite3
