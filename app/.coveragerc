@@ -1,5 +1,7 @@
 [run]
-source = reservaciones
+source =
+    salas
+    reservaciones
 branch = True
 omit =
     */migrations/*
