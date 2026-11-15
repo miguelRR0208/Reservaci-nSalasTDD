@@ -1,0 +1,74 @@
+Creating test database for alias 'default'...
+Destroying old test database for alias 'default'...
+FEEEE
+======================================================================
+ERROR: test_salas_iniciales_tienen_datos_correctos (salas.tests.tests_datos_iniciales.TestDatosInicialesSalas.test_salas_iniciales_tienen_datos_correctos) (sala='Sala A')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\salas\tests\tests_datos_iniciales.py", line 23, in test_salas_iniciales_tienen_datos_correctos
+    sala = Sala.objects.get(nombre=nombre)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\db\models\query.py", line 635, in get
+    raise self.model.DoesNotExist(
+salas.models.Sala.DoesNotExist: Sala matching query does not exist.
+
+======================================================================
+ERROR: test_salas_iniciales_tienen_datos_correctos (salas.tests.tests_datos_iniciales.TestDatosInicialesSalas.test_salas_iniciales_tienen_datos_correctos) (sala='Sala B')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\salas\tests\tests_datos_iniciales.py", line 23, in test_salas_iniciales_tienen_datos_correctos
+    sala = Sala.objects.get(nombre=nombre)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\db\models\query.py", line 635, in get
+    raise self.model.DoesNotExist(
+salas.models.Sala.DoesNotExist: Sala matching query does not exist.
+
+======================================================================
+ERROR: test_salas_iniciales_tienen_datos_correctos (salas.tests.tests_datos_iniciales.TestDatosInicialesSalas.test_salas_iniciales_tienen_datos_correctos) (sala='Sala C')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\salas\tests\tests_datos_iniciales.py", line 23, in test_salas_iniciales_tienen_datos_correctos
+    sala = Sala.objects.get(nombre=nombre)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\db\models\query.py", line 635, in get
+    raise self.model.DoesNotExist(
+salas.models.Sala.DoesNotExist: Sala matching query does not exist.
+
+======================================================================
+ERROR: test_salas_iniciales_tienen_datos_correctos (salas.tests.tests_datos_iniciales.TestDatosInicialesSalas.test_salas_iniciales_tienen_datos_correctos) (sala='Sala de mantenimiento')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\salas\tests\tests_datos_iniciales.py", line 23, in test_salas_iniciales_tienen_datos_correctos
+    sala = Sala.objects.get(nombre=nombre)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\db\models\query.py", line 635, in get
+    raise self.model.DoesNotExist(
+salas.models.Sala.DoesNotExist: Sala matching query does not exist.
+
+======================================================================
+FAIL: test_existen_las_cuatro_salas_iniciales (salas.tests.tests_datos_iniciales.TestDatosInicialesSalas.test_existen_las_cuatro_salas_iniciales)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\salas\tests\tests_datos_iniciales.py", line 18, in test_existen_las_cuatro_salas_iniciales
+    self.assertEqual(Sala.objects.filter(nombre__in=nombres).count(), 4)
+AssertionError: 0 != 4
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.010s
+
+FAILED (failures=1, errors=4)
+Destroying test database for alias 'default'...
+Found 2 test(s).
+System check identified no issues (0 silenced).
