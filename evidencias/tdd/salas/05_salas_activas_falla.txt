@@ -1,0 +1,28 @@
+Creating test database for alias 'default'...
+Destroying old test database for alias 'default'...
+EE
+======================================================================
+ERROR: test_activas_incluye_salas_iniciales_activas (salas.tests.tests_models.TestSalasActivas.test_activas_incluye_salas_iniciales_activas)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\salas\tests\tests_models.py", line 89, in test_activas_incluye_salas_iniciales_activas
+    Sala.objects.activas().values_list('nombre', flat=True)
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Manager' object has no attribute 'activas'
+
+======================================================================
+ERROR: test_activas_solo_regresa_salas_activas (salas.tests.tests_models.TestSalasActivas.test_activas_solo_regresa_salas_activas)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\salas\tests\tests_models.py", line 83, in test_activas_solo_regresa_salas_activas
+    activas = Sala.objects.activas()
+              ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Manager' object has no attribute 'activas'
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.007s
+
+FAILED (errors=2)
+Destroying test database for alias 'default'...
+Found 2 test(s).
+System check identified no issues (0 silenced).

@@ -1,0 +1,22 @@
+E
+======================================================================
+ERROR: salas.tests.tests_models (unittest.loader._FailedTest.salas.tests.tests_models)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: salas.tests.tests_models
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\salas\tests\tests_models.py", line 5, in <module>
+    from salas.models import Sala
+ImportError: cannot import name 'Sala' from 'salas.models' (C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\salas\models.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+Found 1 test(s).
+System check identified no issues (0 silenced).
