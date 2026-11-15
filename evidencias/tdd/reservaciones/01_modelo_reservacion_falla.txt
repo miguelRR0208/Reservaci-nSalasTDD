@@ -1,0 +1,22 @@
+E
+======================================================================
+ERROR: reservaciones.tests.tests_models (unittest.loader._FailedTest.reservaciones.tests.tests_models)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: reservaciones.tests.tests_models
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_models.py", line 8, in <module>
+    from reservaciones.models import Reservacion
+ImportError: cannot import name 'Reservacion' from 'reservaciones.models' (C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\models.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+Found 1 test(s).
+System check identified no issues (0 silenced).
