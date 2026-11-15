@@ -1,0 +1,296 @@
+Creating test database for alias 'default'...
+Destroying old test database for alias 'default'...
+USING RUNNER: behave.runner:Runner
+Característica: Registrar una reservación de sala # features/reservaciones.feature:1
+  Como usuario autenticado
+  Quiero seleccionar una sala disponible y registrar una reservación
+  Para asegurar el uso exclusivo de la sala durante un periodo determinado
+  Característica: Registrar una reservación de sala  # features/reservaciones.feature:1
+
+  Escenario: CA-01 Registrar una reservación válida                                             # features/reservaciones.feature:10
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:71
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:15
+      Traceback (most recent call last):
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\model.py", line 1991, in run
+          match.run(runner.context)
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\matchers.py", line 105, in run
+          self.func(context, *args, **kwargs)
+        File "features\steps\autenticacion_steps.py", line 17, in sesion_iniciada
+          iniciar_sesion(context, context.navegador, usuario, clave)
+        File "features\steps\autenticacion_steps.py", line 9, in iniciar_sesion
+          navegador.get(context.get_url('login'))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave_django\environment.py", line 36, in get_url
+          url = resolve_url(to, *args, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+          return reverse(to, args=args, kwargs=kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+          resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+          raise NoReverseMatch(msg)
+      django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+
+    Dado que no existe otra reservación vigente para la sala "Sala A" mañana de 10:00 a 11:00   # None
+    Cuando abro el formulario de nueva reservación                                              # None
+    Y capturo la sala "Sala A" para mañana de 10:00 a 11:00                                     # None
+    Y capturo 3 asistentes con el propósito "Repaso para el examen de cálculo"                  # None
+    Y envío el formulario                                                                       # None
+    Entonces mi reservación queda registrada con estado "VIGENTE"                               # None
+    Y veo el mensaje "La reservación se registró correctamente."                                # None
+    Y en mi lista aparece la reservación de "Sala A" de 10:00 a 11:00 con estado "VIGENTE"      # None
+
+  Escenario: CA-02 Rechazar una reservación con horario traslapado                                        # features/reservaciones.feature:20
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas           # features/steps/reservacion_steps.py:71
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                                    # features/steps/autenticacion_steps.py:15
+      Traceback (most recent call last):
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\model.py", line 1991, in run
+          match.run(runner.context)
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\matchers.py", line 105, in run
+          self.func(context, *args, **kwargs)
+        File "features\steps\autenticacion_steps.py", line 17, in sesion_iniciada
+          iniciar_sesion(context, context.navegador, usuario, clave)
+        File "features\steps\autenticacion_steps.py", line 9, in iniciar_sesion
+          navegador.get(context.get_url('login'))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave_django\environment.py", line 36, in get_url
+          url = resolve_url(to, *args, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+          return reverse(to, args=args, kwargs=kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+          resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+          raise NoReverseMatch(msg)
+      django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+
+    Dado que existe una reservación vigente de otro usuario para la sala "Sala A" mañana de 10:00 a 11:00 # None
+    Cuando abro el formulario de nueva reservación                                                        # None
+    Y capturo la sala "Sala A" para mañana de 10:30 a 11:30                                               # None
+    Y capturo 2 asistentes con el propósito "Reunión del equipo de proyecto"                              # None
+    Y envío el formulario                                                                                 # None
+    Entonces no se registra ninguna reservación nueva                                                     # None
+    Y veo el mensaje "La sala no está disponible en el horario solicitado."                               # None
+
+  Escenario: CA-03 Rechazar una reservación que exceda la capacidad                             # features/reservaciones.feature:29
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:71
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:15
+      Traceback (most recent call last):
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\model.py", line 1991, in run
+          match.run(runner.context)
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\matchers.py", line 105, in run
+          self.func(context, *args, **kwargs)
+        File "features\steps\autenticacion_steps.py", line 17, in sesion_iniciada
+          iniciar_sesion(context, context.navegador, usuario, clave)
+        File "features\steps\autenticacion_steps.py", line 9, in iniciar_sesion
+          navegador.get(context.get_url('login'))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave_django\environment.py", line 36, in get_url
+          url = resolve_url(to, *args, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+          return reverse(to, args=args, kwargs=kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+          resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+          raise NoReverseMatch(msg)
+      django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+
+    Cuando abro el formulario de nueva reservación                                              # None
+    Y capturo la sala "Sala A" para mañana de 10:00 a 11:00                                     # None
+    Y capturo 5 asistentes con el propósito "Sesión de estudio en grupo grande"                 # None
+    Y envío el formulario                                                                       # None
+    Entonces no se registra ninguna reservación nueva                                           # None
+    Y veo el mensaje "El número de asistentes supera la capacidad de la sala."                  # None
+    Y el formulario conserva los datos que capturé                                              # None
+
+  Esquema del escenario: CA-04 Rechazar una fecha u horario inválidos -- @1.1                   # features/reservaciones.feature:48
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:71
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:15
+      Traceback (most recent call last):
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\model.py", line 1991, in run
+          match.run(runner.context)
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\matchers.py", line 105, in run
+          self.func(context, *args, **kwargs)
+        File "features\steps\autenticacion_steps.py", line 17, in sesion_iniciada
+          iniciar_sesion(context, context.navegador, usuario, clave)
+        File "features\steps\autenticacion_steps.py", line 9, in iniciar_sesion
+          navegador.get(context.get_url('login'))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave_django\environment.py", line 36, in get_url
+          url = resolve_url(to, *args, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+          return reverse(to, args=args, kwargs=kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+          resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+          raise NoReverseMatch(msg)
+      django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+
+    Cuando abro el formulario de nueva reservación                                              # None
+    Y capturo la sala "Sala A" para ayer de 10:00 a 11:00                                       # None
+    Y capturo 2 asistentes con el propósito "Sesión de estudio de algoritmos"                   # None
+    Y envío el formulario                                                                       # None
+    Entonces no se registra ninguna reservación nueva                                           # None
+    Y veo el mensaje "La fecha no puede ser anterior al día de hoy."                            # None
+
+  Esquema del escenario: CA-04 Rechazar una fecha u horario inválidos -- @1.2                   # features/reservaciones.feature:49
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:71
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:15
+      Traceback (most recent call last):
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\model.py", line 1991, in run
+          match.run(runner.context)
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\matchers.py", line 105, in run
+          self.func(context, *args, **kwargs)
+        File "features\steps\autenticacion_steps.py", line 17, in sesion_iniciada
+          iniciar_sesion(context, context.navegador, usuario, clave)
+        File "features\steps\autenticacion_steps.py", line 9, in iniciar_sesion
+          navegador.get(context.get_url('login'))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave_django\environment.py", line 36, in get_url
+          url = resolve_url(to, *args, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+          return reverse(to, args=args, kwargs=kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+          resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+          raise NoReverseMatch(msg)
+      django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+
+    Cuando abro el formulario de nueva reservación                                              # None
+    Y capturo la sala "Sala A" para mañana de 11:00 a 10:00                                     # None
+    Y capturo 2 asistentes con el propósito "Sesión de estudio de algoritmos"                   # None
+    Y envío el formulario                                                                       # None
+    Entonces no se registra ninguna reservación nueva                                           # None
+    Y veo el mensaje "La hora de fin debe ser posterior a la hora de inicio."                   # None
+
+  Esquema del escenario: CA-04 Rechazar una fecha u horario inválidos -- @1.3                   # features/reservaciones.feature:50
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:71
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:15
+      Traceback (most recent call last):
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\model.py", line 1991, in run
+          match.run(runner.context)
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\matchers.py", line 105, in run
+          self.func(context, *args, **kwargs)
+        File "features\steps\autenticacion_steps.py", line 17, in sesion_iniciada
+          iniciar_sesion(context, context.navegador, usuario, clave)
+        File "features\steps\autenticacion_steps.py", line 9, in iniciar_sesion
+          navegador.get(context.get_url('login'))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave_django\environment.py", line 36, in get_url
+          url = resolve_url(to, *args, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+          return reverse(to, args=args, kwargs=kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+          resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+          raise NoReverseMatch(msg)
+      django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+
+    Cuando abro el formulario de nueva reservación                                              # None
+    Y capturo la sala "Sala A" para mañana de 10:00 a 10:00                                     # None
+    Y capturo 2 asistentes con el propósito "Sesión de estudio de algoritmos"                   # None
+    Y envío el formulario                                                                       # None
+    Entonces no se registra ninguna reservación nueva                                           # None
+    Y veo el mensaje "La hora de fin debe ser posterior a la hora de inicio."                   # None
+
+  Escenario: CA-05 Rechazar una sala inactiva                                                   # features/reservaciones.feature:52
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:71
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:15
+      Traceback (most recent call last):
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\model.py", line 1991, in run
+          match.run(runner.context)
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\matchers.py", line 105, in run
+          self.func(context, *args, **kwargs)
+        File "features\steps\autenticacion_steps.py", line 17, in sesion_iniciada
+          iniciar_sesion(context, context.navegador, usuario, clave)
+        File "features\steps\autenticacion_steps.py", line 9, in iniciar_sesion
+          navegador.get(context.get_url('login'))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave_django\environment.py", line 36, in get_url
+          url = resolve_url(to, *args, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+          return reverse(to, args=args, kwargs=kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+          resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+          raise NoReverseMatch(msg)
+      django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+
+    Dado que existe la sala inactiva "Sala de mantenimiento" con capacidad para 6 personas      # None
+    Cuando abro el formulario de nueva reservación                                              # None
+    Entonces la sala "Sala de mantenimiento" no aparece entre las opciones                      # None
+    Cuando fuerzo la selección de la sala "Sala de mantenimiento" para mañana de 10:00 a 11:00  # None
+    Y capturo 2 asistentes con el propósito "Revisión del proyecto final"                       # None
+    Y envío el formulario                                                                       # None
+    Entonces no se registra ninguna reservación nueva                                           # None
+    Y veo el mensaje "La sala no se encuentra disponible para reservación."                     # None
+
+  Escenario: CA-06 Evitar una doble reservación ante solicitudes concurrentes                        # features/reservaciones.feature:62
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas      # features/steps/reservacion_steps.py:71
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                               # features/steps/autenticacion_steps.py:15
+      Traceback (most recent call last):
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\model.py", line 1991, in run
+          match.run(runner.context)
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\matchers.py", line 105, in run
+          self.func(context, *args, **kwargs)
+        File "features\steps\autenticacion_steps.py", line 17, in sesion_iniciada
+          iniciar_sesion(context, context.navegador, usuario, clave)
+        File "features\steps\autenticacion_steps.py", line 9, in iniciar_sesion
+          navegador.get(context.get_url('login'))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave_django\environment.py", line 36, in get_url
+          url = resolve_url(to, *args, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+          return reverse(to, args=args, kwargs=kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+          resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+          raise NoReverseMatch(msg)
+      django.urls.exceptions.NoReverseMatch: Reverse for 'login' not found. 'login' is not a valid view function or pattern name.
+
+    Dado que no existe otra reservación vigente para la sala "Sala A" mañana de 12:00 a 13:00        # None
+    Y el usuario "beto" con contraseña "Reserva2026" ha iniciado sesión en otro navegador            # None
+    Y en ambos navegadores se captura la sala "Sala A" para mañana de 12:00 a 13:00 con 2 asistentes # None
+    Cuando ambos navegadores envían el formulario al mismo tiempo                                    # None
+    Entonces solo una reservación queda vigente para la sala "Sala A" mañana de 12:00 a 13:00        # None
+    Y un navegador muestra el mensaje "La reservación se registró correctamente."                    # None
+    Y el otro navegador muestra el mensaje "La sala no está disponible en el horario solicitado."    # None
+
+Destroying test database for alias 'default'...
+
+Errored scenarios:
+  features/reservaciones.feature:10  CA-01 Registrar una reservación válida
+  features/reservaciones.feature:20  CA-02 Rechazar una reservación con horario traslapado
+  features/reservaciones.feature:29  CA-03 Rechazar una reservación que exceda la capacidad
+  features/reservaciones.feature:48  CA-04 Rechazar una fecha u horario inválidos -- @1.1 
+  features/reservaciones.feature:49  CA-04 Rechazar una fecha u horario inválidos -- @1.2 
+  features/reservaciones.feature:50  CA-04 Rechazar una fecha u horario inválidos -- @1.3 
+  features/reservaciones.feature:52  CA-05 Rechazar una sala inactiva
+  features/reservaciones.feature:62  CA-06 Evitar una doble reservación ante solicitudes concurrentes
+
+0 features passed, 0 failed, 1 error, 0 skipped
+0 scenarios passed, 0 failed, 8 error, 0 skipped
+8 steps passed, 0 failed, 8 error, 55 skipped
+Took 0min 3.287s
