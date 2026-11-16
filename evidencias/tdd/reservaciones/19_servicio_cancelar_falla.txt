@@ -1,0 +1,20 @@
+E
+======================================================================
+ERROR: tests_servicios (unittest.loader._FailedTest.tests_servicios)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: tests_servicios
+Traceback (most recent call last):
+  File "C:\Program Files\Python312\Lib\unittest\loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_servicios.py", line 9, in <module>
+    from reservaciones.servicios import cancelar_reservacion, crear_reservacion
+ImportError: cannot import name 'cancelar_reservacion' from 'reservaciones.servicios' (C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\servicios.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+Found 1 test(s).
+System check identified no issues (0 silenced).
