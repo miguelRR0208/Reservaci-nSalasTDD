@@ -1,10 +1,12 @@
-from datetime import time, timedelta
+from datetime import date, datetime, time, timedelta
 
-from django.core.exceptions import ValidationError
+from django.contrib.auth.models import User
+from django.core.exceptions import PermissionDenied, ValidationError
 from django.test import SimpleTestCase
 from django.utils import timezone
 
 from reservaciones import reglas
+from reservaciones.models import Reservacion
 from salas.models import Sala
 
 
@@ -118,3 +120,76 @@ class TestReglaSalaActiva(SimpleTestCase):
             'La sala no se encuentra disponible para reservación.',
         ):
             reglas.validar_sala_activa(Sala(nombre='Sala X', activa=False))
+
+
+class TestReglasCancelacion(SimpleTestCase):
+
+    def setUp(self):
+        self.reservacion = Reservacion(
+            usuario_id=1,
+            fecha=date(2030, 5, 10),
+            hora_inicio=time(10, 0),
+            hora_fin=time(11, 0),
+            estado=Reservacion.Estado.VIGENTE,
+        )
+
+    def momento(self, hora, minuto):
+        return timezone.make_aware(datetime(2030, 5, 10, hora, minuto))
+
+    def test_inicio_junta_fecha_y_hora_en_la_zona_local(self):
+        self.assertEqual(
+            reglas.inicio_de(self.reservacion), self.momento(10, 0)
+        )
+
+    def test_acepta_al_propietario(self):
+        reglas.validar_propietario(self.reservacion, User(pk=1))
+
+    def test_rechaza_a_otro_usuario(self):
+        with self.assertRaises(PermissionDenied):
+            reglas.validar_propietario(self.reservacion, User(pk=2))
+
+    def test_acepta_reservacion_vigente(self):
+        reglas.validar_vigente(self.reservacion)
+
+    def test_rechaza_reservacion_cancelada(self):
+        self.reservacion.estado = Reservacion.Estado.CANCELADA
+        with self.assertRaisesMessage(
+            ValidationError, 'La reservación ya fue cancelada.'
+        ):
+            reglas.validar_vigente(self.reservacion)
+
+    def test_acepta_cancelar_con_mas_de_60_minutos(self):
+        reglas.validar_anticipacion_cancelacion(
+            self.reservacion, self.momento(8, 59)
+        )
+
+    def assertPeriodoConcluido(self, ahora):
+        with self.assertRaisesMessage(
+            ValidationError, 'El periodo de cancelación ha concluido.'
+        ):
+            reglas.validar_anticipacion_cancelacion(self.reservacion, ahora)
+
+    def test_rechaza_cancelar_con_60_minutos_exactos(self):
+        self.assertPeriodoConcluido(self.momento(9, 0))
+
+    def test_rechaza_cancelar_con_menos_de_60_minutos(self):
+        self.assertPeriodoConcluido(self.momento(9, 30))
+
+    def test_rechaza_cancelar_una_reservacion_ya_iniciada(self):
+        self.assertPeriodoConcluido(self.momento(10, 30))
+
+    def test_se_puede_cancelar_si_esta_vigente_y_a_tiempo(self):
+        self.assertTrue(
+            reglas.se_puede_cancelar(self.reservacion, self.momento(8, 0))
+        )
+
+    def test_no_se_puede_cancelar_si_ya_esta_cancelada(self):
+        self.reservacion.estado = Reservacion.Estado.CANCELADA
+        self.assertFalse(
+            reglas.se_puede_cancelar(self.reservacion, self.momento(8, 0))
+        )
+
+    def test_no_se_puede_cancelar_si_ya_no_hay_tiempo(self):
+        self.assertFalse(
+            reglas.se_puede_cancelar(self.reservacion, self.momento(9, 0))
+        )

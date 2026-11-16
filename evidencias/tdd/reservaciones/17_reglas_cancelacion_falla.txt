@@ -1,0 +1,121 @@
+...................EEEEEEEEEEEE
+======================================================================
+ERROR: test_acepta_al_propietario (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_acepta_al_propietario)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_reglas.py", line 145, in test_acepta_al_propietario
+    reglas.validar_propietario(self.reservacion, User(pk=1))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'reservaciones.reglas' has no attribute 'validar_propietario'
+
+======================================================================
+ERROR: test_acepta_cancelar_con_mas_de_60_minutos (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_acepta_cancelar_con_mas_de_60_minutos)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_reglas.py", line 162, in test_acepta_cancelar_con_mas_de_60_minutos
+    reglas.validar_anticipacion_cancelacion(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'reservaciones.reglas' has no attribute 'validar_anticipacion_cancelacion'
+
+======================================================================
+ERROR: test_acepta_reservacion_vigente (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_acepta_reservacion_vigente)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_reglas.py", line 152, in test_acepta_reservacion_vigente
+    reglas.validar_vigente(self.reservacion)
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'reservaciones.reglas' has no attribute 'validar_vigente'
+
+======================================================================
+ERROR: test_inicio_junta_fecha_y_hora_en_la_zona_local (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_inicio_junta_fecha_y_hora_en_la_zona_local)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_reglas.py", line 141, in test_inicio_junta_fecha_y_hora_en_la_zona_local
+    reglas.inicio_de(self.reservacion), self.momento(10, 0)
+    ^^^^^^^^^^^^^^^^
+AttributeError: module 'reservaciones.reglas' has no attribute 'inicio_de'
+
+======================================================================
+ERROR: test_no_se_puede_cancelar_si_ya_esta_cancelada (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_no_se_puede_cancelar_si_ya_esta_cancelada)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_reglas.py", line 189, in test_no_se_puede_cancelar_si_ya_esta_cancelada
+    reglas.se_puede_cancelar(self.reservacion, self.momento(8, 0))
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'reservaciones.reglas' has no attribute 'se_puede_cancelar'
+
+======================================================================
+ERROR: test_no_se_puede_cancelar_si_ya_no_hay_tiempo (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_no_se_puede_cancelar_si_ya_no_hay_tiempo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_reglas.py", line 194, in test_no_se_puede_cancelar_si_ya_no_hay_tiempo
+    reglas.se_puede_cancelar(self.reservacion, self.momento(9, 0))
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'reservaciones.reglas' has no attribute 'se_puede_cancelar'
+
+======================================================================
+ERROR: test_rechaza_a_otro_usuario (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_rechaza_a_otro_usuario)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_reglas.py", line 149, in test_rechaza_a_otro_usuario
+    reglas.validar_propietario(self.reservacion, User(pk=2))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'reservaciones.reglas' has no attribute 'validar_propietario'
+
+======================================================================
+ERROR: test_rechaza_cancelar_con_60_minutos_exactos (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_rechaza_cancelar_con_60_minutos_exactos)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_reglas.py", line 173, in test_rechaza_cancelar_con_60_minutos_exactos
+    self.assertPeriodoConcluido(self.momento(9, 0))
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_reglas.py", line 170, in assertPeriodoConcluido
+    reglas.validar_anticipacion_cancelacion(self.reservacion, ahora)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'reservaciones.reglas' has no attribute 'validar_anticipacion_cancelacion'
+
+======================================================================
+ERROR: test_rechaza_cancelar_con_menos_de_60_minutos (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_rechaza_cancelar_con_menos_de_60_minutos)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_reglas.py", line 176, in test_rechaza_cancelar_con_menos_de_60_minutos
+    self.assertPeriodoConcluido(self.momento(9, 30))
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_reglas.py", line 170, in assertPeriodoConcluido
+    reglas.validar_anticipacion_cancelacion(self.reservacion, ahora)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'reservaciones.reglas' has no attribute 'validar_anticipacion_cancelacion'
+
+======================================================================
+ERROR: test_rechaza_cancelar_una_reservacion_ya_iniciada (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_rechaza_cancelar_una_reservacion_ya_iniciada)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_reglas.py", line 179, in test_rechaza_cancelar_una_reservacion_ya_iniciada
+    self.assertPeriodoConcluido(self.momento(10, 30))
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_reglas.py", line 170, in assertPeriodoConcluido
+    reglas.validar_anticipacion_cancelacion(self.reservacion, ahora)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'reservaciones.reglas' has no attribute 'validar_anticipacion_cancelacion'
+
+======================================================================
+ERROR: test_rechaza_reservacion_cancelada (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_rechaza_reservacion_cancelada)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_reglas.py", line 159, in test_rechaza_reservacion_cancelada
+    reglas.validar_vigente(self.reservacion)
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'reservaciones.reglas' has no attribute 'validar_vigente'
+
+======================================================================
+ERROR: test_se_puede_cancelar_si_esta_vigente_y_a_tiempo (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_se_puede_cancelar_si_esta_vigente_y_a_tiempo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_reglas.py", line 183, in test_se_puede_cancelar_si_esta_vigente_y_a_tiempo
+    reglas.se_puede_cancelar(self.reservacion, self.momento(8, 0))
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'reservaciones.reglas' has no attribute 'se_puede_cancelar'
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.034s
+
+FAILED (errors=12)
+Found 31 test(s).
+System check identified no issues (0 silenced).
