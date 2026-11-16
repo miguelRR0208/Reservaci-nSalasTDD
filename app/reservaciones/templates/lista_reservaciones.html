@@ -15,6 +15,8 @@
             <th>Asistentes</th>
             <th>Propósito</th>
             <th>Estado</th>
+            <th>Cancelada el</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -26,6 +28,12 @@
             <td>{{ reservacion.asistentes }}</td>
             <td>{{ reservacion.proposito }}</td>
             <td class="estado">{{ reservacion.estado }}</td>
+            <td class="fecha-cancelacion">{{ reservacion.fecha_cancelacion|date:"Y-m-d H:i" }}</td>
+            <td>
+                {% if reservacion.cancelable %}
+                <a href="{% url 'reservaciones:cancelar' reservacion.pk %}" id="cancelar-{{ reservacion.pk }}">Cancelar</a>
+                {% endif %}
+            </td>
         </tr>
         {% endfor %}
     </tbody>

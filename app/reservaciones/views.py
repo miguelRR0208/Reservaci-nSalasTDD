@@ -1,15 +1,20 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ValidationError
-from django.shortcuts import redirect, render
+from django.shortcuts import get_object_or_404, redirect, render
+from django.utils import timezone
 
+from reservaciones import reglas
 from reservaciones.forms import ReservacionForm
-from reservaciones.servicios import crear_reservacion
+from reservaciones.servicios import cancelar_reservacion, crear_reservacion
 
 
 @login_required
 def lista_reservaciones(request):
-    reservaciones = request.user.reservaciones.select_related('sala')
+    ahora = timezone.now()
+    reservaciones = list(request.user.reservaciones.select_related('sala'))
+    for reservacion in reservaciones:
+        reservacion.cancelable = reglas.se_puede_cancelar(reservacion, ahora)
     return render(
         request,
         'lista_reservaciones.html',
@@ -33,3 +38,22 @@ def nueva_reservacion(request):
     return render(
         request, 'nueva_reservacion.html', {'formulario': formulario}
     )
+
+
+@login_required
+def cancelar(request, pk):
+    # Solo se buscan las reservaciones del usuario; si la reservación es
+    # de alguien más se responde como si no existiera.
+    reservacion = get_object_or_404(request.user.reservaciones, pk=pk)
+    if request.method != 'POST':
+        return render(
+            request, 'cancelar_reservacion.html', {'reservacion': reservacion}
+        )
+    try:
+        cancelar_reservacion(request.user, reservacion)
+    except ValidationError as error:
+        for mensaje in error.messages:
+            messages.error(request, mensaje)
+    else:
+        messages.success(request, 'La reservación se canceló correctamente.')
+    return redirect('reservaciones:lista')
