@@ -1,0 +1,48 @@
+$ python rendimiento/revisar_traslapes.py
+
+-- Reservaciones por propósito y estado
+SELECT proposito, estado, COUNT(*)
+FROM reservaciones_reservacion
+GROUP BY proposito, estado
+ORDER BY proposito
+Prueba de concurrencia PERF-03 | VIGENTE | 10
+Prueba de rendimiento PERF-02 | VIGENTE | 90
+(2 filas)
+
+-- Reservaciones vigentes de PERF-03 por horario
+SELECT s.nombre, r.fecha, r.hora_inicio, r.hora_fin, COUNT(*),
+       GROUP_CONCAT(u.username)
+FROM reservaciones_reservacion r
+JOIN salas_sala s ON s.id = r.sala_id
+JOIN auth_user u ON u.id = r.usuario_id
+WHERE r.proposito = 'Prueba de concurrencia PERF-03'
+  AND r.estado = 'VIGENTE'
+GROUP BY s.nombre, r.fecha, r.hora_inicio, r.hora_fin
+ORDER BY r.hora_inicio
+Sala A | 2026-12-31 | 08:00:00 | 09:00:00 | 1 | beto
+Sala A | 2026-12-31 | 09:00:00 | 10:00:00 | 1 | ana
+Sala A | 2026-12-31 | 10:00:00 | 11:00:00 | 1 | ana
+Sala A | 2026-12-31 | 11:00:00 | 12:00:00 | 1 | beto
+Sala A | 2026-12-31 | 12:00:00 | 13:00:00 | 1 | beto
+Sala A | 2026-12-31 | 13:00:00 | 14:00:00 | 1 | ana
+Sala A | 2026-12-31 | 14:00:00 | 15:00:00 | 1 | ana
+Sala A | 2026-12-31 | 15:00:00 | 16:00:00 | 1 | beto
+Sala A | 2026-12-31 | 16:00:00 | 17:00:00 | 1 | beto
+Sala A | 2026-12-31 | 17:00:00 | 18:00:00 | 1 | ana
+(10 filas)
+
+-- Reservaciones vigentes traslapadas
+SELECT a.id, b.id, s.nombre, a.fecha,
+       a.hora_inicio, a.hora_fin, b.hora_inicio, b.hora_fin
+FROM reservaciones_reservacion a
+JOIN reservaciones_reservacion b
+  ON a.sala_id = b.sala_id
+ AND a.fecha = b.fecha
+ AND a.id < b.id
+ AND a.hora_inicio < b.hora_fin
+ AND b.hora_inicio < a.hora_fin
+JOIN salas_sala s ON s.id = a.sala_id
+WHERE a.estado = 'VIGENTE' AND b.estado = 'VIGENTE'
+(0 filas)
+
+Sin traslapes
