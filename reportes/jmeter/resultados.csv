@@ -1,0 +1,701 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1794859801632,22,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-1,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,22,0,16
+1794859802567,4,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-2,text,true,,1419,131,2,2,http://127.0.0.1:8010/cuentas/login/,3,0,1
+1794859801661,919,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-1,text,true,,718,387,2,2,http://127.0.0.1:8010/cuentas/login/,919,0,0
+1794859802582,9,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-1,text,true,,2605,233,2,2,http://127.0.0.1:8010/reservaciones/nueva/,9,0,0
+1794859802592,30,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-1,text,true,,542,517,2,2,http://127.0.0.1:8010/reservaciones/nueva/,30,0,0
+1794859802623,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-1,text,true,,2836,405,2,2,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859802630,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-1,text,true,,542,517,2,2,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859802642,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-1,text,true,,2836,405,2,2,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859802649,12,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-1,text,true,,542,517,2,2,http://127.0.0.1:8010/reservaciones/nueva/,12,0,0
+1794859802571,453,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-2,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,453,0,0
+1794859803025,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-2,text,true,,2606,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859803031,12,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-2,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,12,0,0
+1794859803044,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-2,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859803050,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-2,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859803063,8,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-2,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,8,0,0
+1794859803072,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-2,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859803568,4,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-3,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,4,0,1
+1794859803573,427,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-3,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,427,0,0
+1794859804001,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-3,text,true,,2605,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859804007,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-3,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859804019,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-3,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859804026,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-3,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859804037,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-3,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859804044,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-3,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859804566,8,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-4,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,8,0,2
+1794859804575,430,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-4,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,430,0,0
+1794859805007,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-4,text,true,,2606,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859805013,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-4,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859805025,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-4,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859805031,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-4,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859805043,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-4,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859805049,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-4,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859805563,3,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-5,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,3,0,1
+1794859805567,427,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-5,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,427,0,0
+1794859805994,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-5,text,true,,2605,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859806000,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-5,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859806012,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-5,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859806018,12,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-5,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,12,0,0
+1794859806030,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-5,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859806037,12,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-5,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,12,0,0
+1794859806565,3,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-6,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,3,0,1
+1794859806569,428,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-6,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,428,0,0
+1794859806997,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-6,text,true,,2606,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859807003,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-6,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859807015,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-6,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859807021,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-6,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859807032,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-6,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859807038,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-6,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859807566,3,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-7,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,3,0,1
+1794859807570,416,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-7,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,416,0,0
+1794859807986,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-7,text,true,,2605,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859807992,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-7,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859808003,7,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-7,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,7,0,0
+1794859808011,12,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-7,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,12,0,0
+1794859808024,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-7,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859808029,13,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-7,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,13,0,0
+1794859808565,5,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-8,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,5,0,2
+1794859808570,430,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-8,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,430,0,0
+1794859809001,7,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-8,text,true,,2606,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859809008,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-8,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859809019,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-8,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859809025,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-8,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859809036,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-8,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859809042,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-8,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859809563,5,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-9,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,5,0,1
+1794859809569,422,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-9,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,422,0,0
+1794859809992,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-9,text,true,,2605,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859809998,9,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-9,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,9,0,0
+1794859810008,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-9,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859810015,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-9,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859810026,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-9,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859810032,9,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-9,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,9,0,0
+1794859810571,2,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-10,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,2,0,0
+1794859810574,425,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-10,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,425,0,0
+1794859810999,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-10,text,true,,2606,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859811005,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-10,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859811016,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-10,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859811021,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-10,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859811032,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-10,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859811038,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-10,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859811560,3,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-11,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,3,0,1
+1794859811564,417,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-11,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,417,0,0
+1794859811981,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-11,text,true,,2605,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859811987,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-11,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859811999,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-11,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859812005,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-11,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859812016,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-11,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859812022,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-11,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859812560,2,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-12,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,2,0,0
+1794859812563,424,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-12,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,424,0,0
+1794859812988,7,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-12,text,true,,2606,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,7,0,0
+1794859812996,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-12,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859813007,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-12,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859813013,9,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-12,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,9,0,0
+1794859813023,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-12,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859813029,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-12,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859813571,3,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-13,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,3,0,1
+1794859813574,407,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-13,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,407,0,0
+1794859813982,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-13,text,true,,2605,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859813988,9,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-13,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,9,0,0
+1794859813999,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-13,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859814004,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-13,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859814016,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-13,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859814022,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-13,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859814558,2,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-14,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,2,0,0
+1794859814561,418,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-14,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,418,0,0
+1794859814979,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-14,text,true,,2606,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859814985,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-14,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859814995,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-14,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859815002,9,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-14,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,9,0,0
+1794859815012,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-14,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859815018,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-14,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859815558,3,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-15,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,3,0,1
+1794859815561,420,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-15,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,420,0,0
+1794859815982,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-15,text,true,,2605,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859815988,9,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-15,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,9,0,0
+1794859815998,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-15,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859816004,9,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-15,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,9,0,0
+1794859816014,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-15,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859816020,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-15,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859816559,4,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-16,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,4,0,2
+1794859816564,423,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-16,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,423,0,0
+1794859816988,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-16,text,true,,2606,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859816993,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-16,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859817004,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-16,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859817010,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-16,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859817022,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-16,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859817028,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-16,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859817560,9,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-17,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,9,0,3
+1794859817570,425,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-17,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,425,0,0
+1794859817996,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-17,text,true,,2605,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859818001,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-17,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859818011,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-17,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859818017,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-17,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859818027,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-17,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859818034,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-17,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859818555,4,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-18,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,4,0,1
+1794859818560,420,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-18,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,420,0,0
+1794859818980,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-18,text,true,,2606,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859818987,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-18,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859818998,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-18,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859819003,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-18,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859819014,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-18,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859819019,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-18,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859819561,2,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-19,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,2,0,0
+1794859819564,428,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-19,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,428,0,0
+1794859819992,7,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-19,text,true,,2605,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,7,0,0
+1794859819999,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-19,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859820011,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-19,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859820016,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-19,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859820027,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-19,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859820033,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-19,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859820556,7,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-20,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,7,0,2
+1794859820564,425,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-20,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,425,0,0
+1794859820990,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-20,text,true,,2606,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859820996,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-20,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859821007,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-20,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859821013,9,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-20,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,9,0,0
+1794859821023,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-20,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859821028,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-20,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859821556,5,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-21,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,5,0,3
+1794859821562,426,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-21,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,426,0,0
+1794859821988,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-21,text,true,,2605,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859821994,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-21,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859822005,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-21,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859822011,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-21,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859822022,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-21,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859822027,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-21,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859822556,9,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-22,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,9,0,3
+1794859822565,418,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-22,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,418,0,0
+1794859822983,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-22,text,true,,2606,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859822989,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-22,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859823000,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-22,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859823006,9,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-22,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,9,0,0
+1794859823016,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-22,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859823022,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-22,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859823558,6,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-23,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,6,0,1
+1794859823564,422,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-23,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,422,0,0
+1794859823986,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-23,text,true,,2605,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859823992,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-23,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859824003,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-23,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859824009,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-23,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859824020,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-23,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859824026,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-23,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859824557,5,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-24,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,5,0,1
+1794859824563,426,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-24,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,426,0,0
+1794859824989,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-24,text,true,,2606,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859824995,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-24,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859825007,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-24,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859825013,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-24,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859825024,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-24,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859825030,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-24,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859825554,3,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-25,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,3,0,1
+1794859825558,426,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-25,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,426,0,0
+1794859825985,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-25,text,true,,2605,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859825991,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-25,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859826003,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-25,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859826009,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-25,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859826019,7,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-25,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,7,0,0
+1794859826026,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-25,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859826556,7,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-26,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,7,0,2
+1794859826564,414,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-26,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,414,0,0
+1794859826979,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-26,text,true,,2606,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859826985,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-26,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859826995,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-26,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859827001,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-26,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859827012,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-26,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859827018,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-26,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859827556,5,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-27,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,5,0,3
+1794859827563,424,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-27,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,424,0,0
+1794859827988,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-27,text,true,,2605,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859827995,9,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-27,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,9,0,0
+1794859828006,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-27,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859828012,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-27,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859828023,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-27,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859828029,9,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-27,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,9,0,0
+1794859828556,8,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-28,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,8,0,2
+1794859828565,428,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-28,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,428,0,0
+1794859828993,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-28,text,true,,2606,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859829000,9,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-28,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,9,0,0
+1794859829010,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-28,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859829016,12,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-28,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,12,0,0
+1794859829028,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-28,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859829034,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-28,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859829555,7,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-29,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,7,0,2
+1794859829563,443,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-29,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,443,0,0
+1794859830007,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-29,text,true,,2605,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859830013,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-29,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859830024,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-29,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859830030,10,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-29,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859830040,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-29,text,true,,2836,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859830046,11,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-29,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859830556,6,PERF-02 Abrir inicio de sesión,200,OK,PERF-02 Registro sin traslapes 1-30,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,6,0,2
+1794859830563,426,PERF-02 Iniciar sesión,302,Found,PERF-02 Registro sin traslapes 1-30,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,426,0,0
+1794859830989,6,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-30,text,true,,2606,233,1,1,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859830995,9,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-30,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,9,0,0
+1794859831004,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-30,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859831010,9,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-30,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,9,0,0
+1794859831020,5,PERF-02 Abrir formulario,200,OK,PERF-02 Registro sin traslapes 1-30,text,true,,2837,405,1,1,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859831026,9,PERF-02 Registrar reservación,302,Found,PERF-02 Registro sin traslapes 1-30,text,true,,542,517,1,1,http://127.0.0.1:8010/reservaciones/nueva/,9,0,0
+1794859831038,4,PERF-03 Abrir inicio de sesión,200,OK,PERF-03 Solicitudes simultáneas 2-1,text,true,,1419,131,5,5,http://127.0.0.1:8010/cuentas/login/,4,0,1
+1794859831038,6,PERF-03 Abrir inicio de sesión,200,OK,PERF-03 Solicitudes simultáneas 2-2,text,true,,1419,131,5,5,http://127.0.0.1:8010/cuentas/login/,6,0,1
+1794859831039,8,PERF-03 Abrir inicio de sesión,200,OK,PERF-03 Solicitudes simultáneas 2-3,text,true,,1419,131,5,5,http://127.0.0.1:8010/cuentas/login/,8,0,0
+1794859831039,10,PERF-03 Abrir inicio de sesión,200,OK,PERF-03 Solicitudes simultáneas 2-4,text,true,,1419,131,5,5,http://127.0.0.1:8010/cuentas/login/,10,0,1
+1794859831039,12,PERF-03 Abrir inicio de sesión,200,OK,PERF-03 Solicitudes simultáneas 2-5,text,true,,1419,131,5,5,http://127.0.0.1:8010/cuentas/login/,12,0,1
+1794859831042,686,PERF-03 Iniciar sesión,302,Found,PERF-03 Solicitudes simultáneas 2-1,text,true,,718,387,5,5,http://127.0.0.1:8010/cuentas/login/,686,0,0
+1794859831728,7,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-1,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,7,0,0
+1794859831049,779,PERF-03 Iniciar sesión,302,Found,PERF-03 Solicitudes simultáneas 2-4,text,true,,718,388,5,5,http://127.0.0.1:8010/cuentas/login/,779,0,0
+1794859831052,792,PERF-03 Iniciar sesión,302,Found,PERF-03 Solicitudes simultáneas 2-5,text,true,,718,387,5,5,http://127.0.0.1:8010/cuentas/login/,792,0,0
+1794859831828,21,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-4,text,true,,2606,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,20,0,0
+1794859831844,8,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-5,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,8,0,0
+1794859831044,918,PERF-03 Iniciar sesión,302,Found,PERF-03 Solicitudes simultáneas 2-2,text,true,,718,388,5,5,http://127.0.0.1:8010/cuentas/login/,918,0,0
+1794859831963,5,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-2,text,true,,2606,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859831047,980,PERF-03 Iniciar sesión,302,Found,PERF-03 Solicitudes simultáneas 2-3,text,true,,718,387,5,5,http://127.0.0.1:8010/cuentas/login/,980,0,0
+1794859832028,5,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-3,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859832034,18,PERF-03 Reservar el mismo horario,302,Registrada,PERF-03 Solicitudes simultáneas 2-4,text,true,,542,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,18,0,0
+1794859832034,65,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-3,text,true,,2819,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,65,0,0
+1794859832034,33,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-1,text,true,,2819,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,33,0,0
+1794859832034,53,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-5,text,true,,2819,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,53,0,0
+1794859832034,51,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-2,text,true,,2820,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,51,0,0
+1794859832144,10,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-4,text,true,,2837,405,5,5,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859832148,14,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-5,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,14,0,0
+1794859832148,17,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-3,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,17,0,0
+1794859832148,17,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-1,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,17,0,0
+1794859832148,30,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-2,text,true,,2606,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,30,0,0
+1794859832179,20,PERF-03 Reservar el mismo horario,302,Registrada,PERF-03 Solicitudes simultáneas 2-3,text,true,,542,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,20,0,0
+1794859832200,7,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-3,text,true,,2836,405,5,5,http://127.0.0.1:8010/reservaciones/nueva/,7,0,0
+1794859832179,30,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-5,text,true,,2819,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,30,0,0
+1794859832211,4,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-5,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,4,0,0
+1794859832179,46,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-2,text,true,,2820,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,46,0,0
+1794859832226,5,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-2,text,true,,2606,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859832179,62,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-1,text,true,,2819,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,62,0,0
+1794859832242,5,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-1,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859832179,78,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-4,text,true,,2820,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,77,0,0
+1794859832258,5,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-4,text,true,,2606,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859832263,21,PERF-03 Reservar el mismo horario,302,Registrada,PERF-03 Solicitudes simultáneas 2-1,text,true,,542,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,21,0,0
+1794859832286,8,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-1,text,true,,2836,405,5,5,http://127.0.0.1:8010/reservaciones/nueva/,8,0,0
+1794859832263,43,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-2,text,true,,2820,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,43,0,0
+1794859832307,7,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-2,text,true,,2606,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,7,0,0
+1794859832263,56,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-4,text,true,,2820,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,56,0,0
+1794859832320,7,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-4,text,true,,2606,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,7,0,0
+1794859832263,73,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-5,text,true,,2819,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,73,0,0
+1794859832338,10,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-5,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859832263,89,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-3,text,true,,2819,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,89,0,0
+1794859832354,9,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-3,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,9,0,0
+1794859832364,27,PERF-03 Reservar el mismo horario,302,Registrada,PERF-03 Solicitudes simultáneas 2-4,text,true,,542,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,27,0,0
+1794859832393,8,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-4,text,true,,2837,405,5,5,http://127.0.0.1:8010/reservaciones/nueva/,8,0,0
+1794859832364,50,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-5,text,true,,2819,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,50,0,0
+1794859832364,53,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-2,text,true,,2820,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,53,0,0
+1794859832416,11,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-5,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,11,0,0
+1794859832364,64,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-3,text,true,,2819,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,64,0,0
+1794859832429,5,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-3,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859832419,20,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-2,text,true,,2606,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,20,0,0
+1794859832364,92,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-1,text,true,,2819,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,92,0,0
+1794859832458,5,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-1,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859832464,23,PERF-03 Reservar el mismo horario,302,Registrada,PERF-03 Solicitudes simultáneas 2-2,text,true,,542,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,23,0,0
+1794859832488,6,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-2,text,true,,2837,405,5,5,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859832464,40,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-5,text,true,,2819,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,40,0,0
+1794859832464,41,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-1,text,true,,2819,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,41,0,0
+1794859832505,6,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-5,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859832506,7,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-1,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859832464,52,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-3,text,true,,2819,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,52,0,0
+1794859832517,5,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-3,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859832464,68,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-4,text,true,,2820,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,68,0,0
+1794859832533,4,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-4,text,true,,2606,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,4,0,0
+1794859832538,18,PERF-03 Reservar el mismo horario,302,Registrada,PERF-03 Solicitudes simultáneas 2-3,text,true,,542,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,18,0,0
+1794859832557,7,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-3,text,true,,2836,405,5,5,http://127.0.0.1:8010/reservaciones/nueva/,7,0,0
+1794859832538,42,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-5,text,true,,2819,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,42,0,0
+1794859832538,42,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-4,text,true,,2820,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,42,0,0
+1794859832538,48,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-2,text,true,,2820,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,48,0,0
+1794859832581,9,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-5,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,9,0,0
+1794859832581,16,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-4,text,true,,2606,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,16,0,0
+1794859832587,10,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-2,text,true,,2606,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859832538,60,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-1,text,true,,2819,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,60,0,0
+1794859832599,5,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-1,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859832605,16,PERF-03 Reservar el mismo horario,302,Registrada,PERF-03 Solicitudes simultáneas 2-1,text,true,,542,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,16,0,0
+1794859832605,22,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-4,text,true,,2820,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,22,0,0
+1794859832605,27,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-2,text,true,,2820,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,27,0,0
+1794859832628,8,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-4,text,true,,2606,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,8,0,0
+1794859832622,18,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-1,text,true,,2836,405,5,5,http://127.0.0.1:8010/reservaciones/nueva/,18,0,0
+1794859832633,7,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-2,text,true,,2606,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,7,0,0
+1794859832605,40,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-5,text,true,,2819,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,40,0,0
+1794859832646,4,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-5,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,4,0,0
+1794859832605,51,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-3,text,true,,2819,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,51,0,0
+1794859832657,4,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-3,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,4,0,0
+1794859832661,20,PERF-03 Reservar el mismo horario,302,Registrada,PERF-03 Solicitudes simultáneas 2-4,text,true,,542,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,20,0,0
+1794859832682,10,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-4,text,true,,2837,405,5,5,http://127.0.0.1:8010/reservaciones/nueva/,10,0,0
+1794859832661,31,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-2,text,true,,2820,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,31,0,0
+1794859832693,5,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-2,text,true,,2606,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859832662,41,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-5,text,true,,2819,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,41,0,0
+1794859832704,4,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-5,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,4,0,0
+1794859832661,56,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-3,text,true,,2819,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,56,0,0
+1794859832661,60,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-1,text,true,,2819,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,59,0,0
+1794859832718,6,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-3,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859832722,5,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-1,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859832728,19,PERF-03 Reservar el mismo horario,302,Registrada,PERF-03 Solicitudes simultáneas 2-4,text,true,,542,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,19,0,0
+1794859832728,23,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-5,text,true,,2819,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,23,0,0
+1794859832748,7,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-4,text,true,,2837,405,5,5,http://127.0.0.1:8010/reservaciones/nueva/,7,0,0
+1794859832752,6,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-5,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,6,0,0
+1794859832728,38,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-1,text,true,,2819,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,38,0,0
+1794859832728,43,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-2,text,true,,2820,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,43,0,0
+1794859832767,7,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-1,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,7,0,0
+1794859832772,5,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-2,text,true,,2606,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,5,0,0
+1794859832728,54,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-3,text,true,,2819,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,54,0,0
+1794859832783,4,PERF-03 Abrir formulario,200,OK,PERF-03 Solicitudes simultáneas 2-3,text,true,,2605,233,5,5,http://127.0.0.1:8010/reservaciones/nueva/,4,0,0
+1794859832787,20,PERF-03 Reservar el mismo horario,302,Registrada,PERF-03 Solicitudes simultáneas 2-5,text,true,,542,518,5,5,http://127.0.0.1:8010/reservaciones/nueva/,20,0,0
+1794859832787,25,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-3,text,true,,2819,518,4,4,http://127.0.0.1:8010/reservaciones/nueva/,25,0,0
+1794859832787,41,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-1,text,true,,2819,518,3,3,http://127.0.0.1:8010/reservaciones/nueva/,41,0,0
+1794859832787,57,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-4,text,true,,2820,518,2,2,http://127.0.0.1:8010/reservaciones/nueva/,57,0,0
+1794859832787,72,PERF-03 Reservar el mismo horario,200,Rechazada por horario ocupado,PERF-03 Solicitudes simultáneas 2-2,text,true,,2820,518,1,1,http://127.0.0.1:8010/reservaciones/nueva/,72,0,0
+1794859832862,5,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-1,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,5,0,1
+1794859832868,440,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-1,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,440,0,0
+1794859833308,16,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-1,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,16,0,0
+1794859833325,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-1,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859833335,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-1,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859833345,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-1,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859833355,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-1,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859833462,6,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-2,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,6,0,1
+1794859833469,414,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-2,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,414,0,0
+1794859833884,12,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-2,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,12,0,0
+1794859833896,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-2,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859833907,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-2,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859833916,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-2,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859833926,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-2,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859834062,5,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-3,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,5,0,2
+1794859834068,441,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-3,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,441,0,0
+1794859834509,12,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-3,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859834521,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-3,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859834532,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-3,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859834542,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-3,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859834553,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-3,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859834661,5,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-4,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,5,0,1
+1794859834667,427,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-4,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,427,0,0
+1794859835094,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-4,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859835106,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-4,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859835116,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-4,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859835126,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-4,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859835136,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-4,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859835263,6,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-5,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,6,0,1
+1794859835270,412,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-5,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,412,0,0
+1794859835682,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-5,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859835694,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-5,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859835704,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-5,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859835714,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-5,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859835724,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-5,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859835862,5,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-6,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,5,0,1
+1794859835868,415,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-6,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,415,0,0
+1794859836284,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-6,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859836296,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-6,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859836307,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-6,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859836317,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-6,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859836328,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-6,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859836462,3,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-7,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,3,0,1
+1794859836465,430,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-7,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,430,0,0
+1794859836896,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-7,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859836907,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-7,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859836917,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-7,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859836928,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-7,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859836939,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-7,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859837062,9,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-8,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,9,0,3
+1794859837071,433,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-8,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,433,0,0
+1794859837504,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-8,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859837516,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-8,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859837527,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-8,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859837537,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-8,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859837547,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-8,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859837665,4,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-9,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,4,0,2
+1794859837669,415,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-9,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,415,0,0
+1794859838085,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-9,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859838096,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-9,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859838107,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-9,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859838118,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-9,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859838128,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-9,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859838265,3,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-10,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,3,0,1
+1794859838269,429,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-10,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,429,0,0
+1794859838698,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-10,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859838709,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-10,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859838719,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-10,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859838729,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-10,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859838740,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-10,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859838862,3,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-11,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,3,0,1
+1794859838865,413,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-11,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,413,0,0
+1794859839278,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-11,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859839290,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-11,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859839300,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-11,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859839311,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-11,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859839321,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-11,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859839463,4,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-12,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,4,0,1
+1794859839467,422,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-12,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,422,0,0
+1794859839889,13,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-12,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,13,0,0
+1794859839902,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-12,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859839913,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-12,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859839924,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-12,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859839934,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-12,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859840063,8,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-13,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,8,0,2
+1794859840072,427,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-13,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,427,0,0
+1794859840500,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-13,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859840511,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-13,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859840521,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-13,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859840531,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-13,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859840542,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-13,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859840662,9,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-14,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,9,0,2
+1794859840672,429,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-14,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,429,0,0
+1794859841101,12,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-14,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,12,0,0
+1794859841114,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-14,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859841124,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-14,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859841134,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-14,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859841144,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-14,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859841261,3,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-15,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,3,0,1
+1794859841264,430,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-15,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,430,0,0
+1794859841695,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-15,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859841706,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-15,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859841717,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-15,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859841727,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-15,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859841737,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-15,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859841863,8,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-16,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,8,0,2
+1794859841871,431,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-16,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,431,0,0
+1794859842302,18,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-16,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,17,0,0
+1794859842320,17,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-16,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,17,0,0
+1794859842338,17,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-16,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,17,0,0
+1794859842356,19,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-16,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,19,0,0
+1794859842376,15,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-16,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,15,0,0
+1794859842461,3,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-17,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,3,0,1
+1794859842464,434,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-17,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,434,0,0
+1794859842898,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-17,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859842910,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-17,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859842920,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-17,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859842929,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-17,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859842940,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-17,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859843065,3,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-18,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,3,0,1
+1794859843068,410,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-18,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,410,0,0
+1794859843479,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-18,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859843489,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-18,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859843499,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-18,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859843509,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-18,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859843519,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-18,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859843675,6,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-19,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,6,0,2
+1794859843681,427,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-19,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,427,0,0
+1794859844108,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-19,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859844119,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-19,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859844129,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-19,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859844140,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-19,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859844151,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-19,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859844263,8,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-20,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,8,0,2
+1794859844272,430,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-20,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,430,0,0
+1794859844702,12,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-20,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,12,0,0
+1794859844714,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-20,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859844724,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-20,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859844734,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-20,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859844745,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-20,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859844862,6,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-21,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,6,0,2
+1794859844869,415,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-21,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,415,0,0
+1794859845284,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-21,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859845295,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-21,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859845306,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-21,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859845316,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-21,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859845325,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-21,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859845462,4,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-22,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,3,0,2
+1794859845466,429,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-22,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,429,0,0
+1794859845896,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-22,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859845907,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-22,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859845917,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-22,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859845927,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-22,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859845938,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-22,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859846060,5,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-23,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,5,0,1
+1794859846065,417,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-23,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,417,0,0
+1794859846482,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-23,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859846494,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-23,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859846504,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-23,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859846514,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-23,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859846525,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-23,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859846664,8,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-24,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,8,0,2
+1794859846673,422,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-24,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,422,0,0
+1794859847096,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-24,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859847107,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-24,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859847118,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-24,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859847128,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-24,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859847138,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-24,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859847263,6,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-25,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,6,0,3
+1794859847270,422,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-25,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,422,0,0
+1794859847693,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-25,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859847705,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-25,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859847715,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-25,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859847725,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-25,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859847735,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-25,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859847863,7,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-26,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,7,0,2
+1794859847871,420,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-26,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,420,0,0
+1794859848291,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-26,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859848303,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-26,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859848312,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-26,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859848322,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-26,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859848332,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-26,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859848462,5,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-27,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,5,0,1
+1794859848468,417,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-27,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,417,0,0
+1794859848885,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-27,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859848896,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-27,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859848906,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-27,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859848916,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-27,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859848926,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-27,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859849062,4,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-28,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,4,0,2
+1794859849066,428,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-28,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,428,0,0
+1794859849494,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-28,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859849505,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-28,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859849515,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-28,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859849526,21,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-28,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,21,0,0
+1794859849548,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-28,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859849661,3,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-29,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,3,0,1
+1794859849664,427,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-29,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,427,0,0
+1794859850091,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-29,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859850102,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-29,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859850112,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-29,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859850122,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-29,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859850132,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-29,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859850261,7,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-30,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,7,0,2
+1794859850269,428,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-30,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,428,0,0
+1794859850697,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-30,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859850708,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-30,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859850718,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-30,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859850728,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-30,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859850737,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-30,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859850861,9,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-31,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,9,0,2
+1794859850871,439,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-31,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,439,0,0
+1794859851310,13,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-31,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,13,0,0
+1794859851324,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-31,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859851333,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-31,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859851343,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-31,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859851352,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-31,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859851475,8,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-32,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,8,0,2
+1794859851484,419,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-32,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,419,0,0
+1794859851904,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-32,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859851915,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-32,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859851925,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-32,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859851934,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-32,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859851944,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-32,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859852061,2,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-33,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,2,0,1
+1794859852064,467,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-33,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,467,0,0
+1794859852531,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-33,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859852543,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-33,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859852553,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-33,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859852563,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-33,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859852573,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-33,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859852662,6,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-34,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,6,0,2
+1794859852668,417,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-34,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,417,0,0
+1794859853085,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-34,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859853096,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-34,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859853106,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-34,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859853116,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-34,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859853126,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-34,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859853262,8,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-35,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,8,0,2
+1794859853271,458,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-35,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,458,0,0
+1794859853730,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-35,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859853742,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-35,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859853752,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-35,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859853762,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-35,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859853772,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-35,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859853861,6,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-36,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,6,0,2
+1794859853867,418,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-36,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,418,0,0
+1794859854285,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-36,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859854296,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-36,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859854306,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-36,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859854316,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-36,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859854325,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-36,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859854462,5,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-37,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,5,0,1
+1794859854467,415,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-37,text,true,,718,387,1,1,http://127.0.0.1:8010/cuentas/login/,415,0,0
+1794859854882,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-37,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859854893,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-37,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859854903,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-37,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859854913,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-37,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859854923,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-37,text,true,,25053,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859855062,3,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-38,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,3,0,1
+1794859855065,413,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-38,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,413,0,0
+1794859855478,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-38,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859855489,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-38,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859855500,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-38,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859855509,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-38,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859855519,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-38,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859855662,5,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-39,text,true,,1419,131,1,1,http://127.0.0.1:8010/cuentas/login/,5,0,2
+1794859856261,3,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-40,text,true,,1419,131,2,2,http://127.0.0.1:8010/cuentas/login/,3,0,1
+1794859855667,689,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-39,text,true,,718,387,2,2,http://127.0.0.1:8010/cuentas/login/,689,0,0
+1794859856357,13,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-39,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,13,0,0
+1794859856370,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-39,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859856381,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-39,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859856391,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-39,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859856401,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-39,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859856869,5,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-41,text,true,,1419,131,2,2,http://127.0.0.1:8010/cuentas/login/,5,0,1
+1794859856264,668,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-40,text,true,,718,388,2,2,http://127.0.0.1:8010/cuentas/login/,668,0,0
+1794859856933,18,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-40,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,18,0,0
+1794859856951,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-40,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859856961,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-40,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859856971,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-40,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859856983,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-40,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859857462,8,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-42,text,true,,1419,131,2,2,http://127.0.0.1:8010/cuentas/login/,8,0,2
+1794859856874,694,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-41,text,true,,718,387,2,2,http://127.0.0.1:8010/cuentas/login/,694,0,0
+1794859857569,16,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-41,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,16,0,0
+1794859857585,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-41,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859857595,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-41,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859857606,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-41,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859857615,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-41,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859858062,3,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-43,text,true,,1419,131,2,2,http://127.0.0.1:8010/cuentas/login/,3,0,1
+1794859857470,700,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-42,text,true,,718,388,2,2,http://127.0.0.1:8010/cuentas/login/,700,0,0
+1794859858170,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-42,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859858181,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-42,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859858191,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-42,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859858201,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-42,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859858211,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-42,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859858663,6,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-44,text,true,,1419,131,2,2,http://127.0.0.1:8010/cuentas/login/,6,0,2
+1794859858065,766,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-43,text,true,,718,387,2,2,http://127.0.0.1:8010/cuentas/login/,766,0,0
+1794859858832,13,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-43,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,13,0,0
+1794859858845,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-43,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859858855,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-43,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859858865,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-43,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859858875,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-43,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859859262,2,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-45,text,true,,1419,131,2,2,http://127.0.0.1:8010/cuentas/login/,2,0,0
+1794859858669,814,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-44,text,true,,718,388,2,2,http://127.0.0.1:8010/cuentas/login/,814,0,0
+1794859859484,15,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-44,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,15,0,0
+1794859859499,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-44,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859859509,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-44,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859859519,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-44,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859859529,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-44,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859859861,3,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-46,text,true,,1419,131,2,2,http://127.0.0.1:8010/cuentas/login/,3,0,1
+1794859859265,823,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-45,text,true,,718,387,2,2,http://127.0.0.1:8010/cuentas/login/,823,0,0
+1794859860090,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-45,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859860101,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-45,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859860112,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-45,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859860123,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-45,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859860133,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-45,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859860463,4,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-47,text,true,,1419,131,2,2,http://127.0.0.1:8010/cuentas/login/,4,0,2
+1794859859864,610,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-46,text,true,,718,388,2,2,http://127.0.0.1:8010/cuentas/login/,610,0,0
+1794859860475,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-46,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859860487,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-46,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859860497,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-46,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859860507,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-46,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859860516,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-46,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859861061,7,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-48,text,true,,1419,131,2,2,http://127.0.0.1:8010/cuentas/login/,7,0,2
+1794859860467,619,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-47,text,true,,718,387,2,2,http://127.0.0.1:8010/cuentas/login/,619,0,0
+1794859861087,13,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-47,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,13,0,0
+1794859861100,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-47,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859861110,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-47,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859861120,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-47,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859861130,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-47,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859861660,4,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-49,text,true,,1419,131,2,2,http://127.0.0.1:8010/cuentas/login/,4,0,1
+1794859861069,637,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-48,text,true,,718,388,2,2,http://127.0.0.1:8010/cuentas/login/,637,0,0
+1794859861708,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-48,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859861720,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-48,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859861731,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-48,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859861741,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-48,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859861752,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-48,text,true,,25060,227,2,2,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859862261,3,PERF-01 Abrir inicio de sesión,200,OK,PERF-01 Consulta de reservaciones 3-50,text,true,,1419,131,2,2,http://127.0.0.1:8010/cuentas/login/,3,0,1
+1794859861664,720,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-49,text,true,,718,387,2,2,http://127.0.0.1:8010/cuentas/login/,720,0,0
+1794859862386,17,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-49,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,17,0,0
+1794859862404,12,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-49,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859862416,12,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-49,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,12,0,0
+1794859862428,13,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-49,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,13,0,0
+1794859862441,15,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-49,text,true,,25053,227,2,2,http://127.0.0.1:8010/reservaciones/,15,0,0
+1794859862264,728,PERF-01 Iniciar sesión,302,Found,PERF-01 Consulta de reservaciones 3-50,text,true,,718,388,1,1,http://127.0.0.1:8010/cuentas/login/,728,0,0
+1794859862992,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-50,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859863003,11,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-50,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,11,0,0
+1794859863014,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-50,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
+1794859863023,10,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-50,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,10,0,0
+1794859863033,9,PERF-01 Consultar mis reservaciones,200,OK,PERF-01 Consulta de reservaciones 3-50,text,true,,25060,227,1,1,http://127.0.0.1:8010/reservaciones/,9,0,0
