@@ -1,0 +1,6 @@
+$ flake8 --count .
+(configuración en .flake8: max-line-length = 79, max-complexity = 10, excluye .venv y migraciones)
+
+0
+
+Total de incumplimientos: 0
