@@ -1,13 +1,16 @@
-from datetime import time
+from datetime import datetime, time, timedelta
 
-from django.core.exceptions import ValidationError
+from django.core.exceptions import PermissionDenied, ValidationError
 from django.utils import timezone
+
+from reservaciones.models import Reservacion
 
 PRIMERA_HORA_INICIO = time(8, 0)
 ULTIMA_HORA_INICIO = time(19, 0)
 HORA_CIERRE = time(20, 0)
 DURACION_MINIMA = 30
 DURACION_MAXIMA = 120
+ANTICIPACION_CANCELACION = timedelta(minutes=60)
 
 
 def validar_fecha_no_pasada(fecha):
@@ -69,3 +72,38 @@ def validar_sala_activa(sala):
             'La sala no se encuentra disponible para reservación.',
             code='sala_inactiva',
         )
+
+
+def inicio_de(reservacion):
+    return timezone.make_aware(
+        datetime.combine(reservacion.fecha, reservacion.hora_inicio)
+    )
+
+
+def validar_propietario(reservacion, usuario):
+    if reservacion.usuario_id != usuario.pk:
+        raise PermissionDenied('La reservación pertenece a otro usuario.')
+
+
+def validar_vigente(reservacion):
+    if reservacion.estado != Reservacion.Estado.VIGENTE:
+        raise ValidationError(
+            'La reservación ya fue cancelada.', code='ya_cancelada'
+        )
+
+
+def validar_anticipacion_cancelacion(reservacion, ahora):
+    if inicio_de(reservacion) - ahora <= ANTICIPACION_CANCELACION:
+        raise ValidationError(
+            'El periodo de cancelación ha concluido.',
+            code='periodo_concluido',
+        )
+
+
+def se_puede_cancelar(reservacion, ahora):
+    try:
+        validar_vigente(reservacion)
+        validar_anticipacion_cancelacion(reservacion, ahora)
+    except ValidationError:
+        return False
+    return True
