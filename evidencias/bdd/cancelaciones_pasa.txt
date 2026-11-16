@@ -1,0 +1,88 @@
+Creating test database for alias 'default'...
+Destroying old test database for alias 'default'...
+USING RUNNER: behave.runner:Runner
+Característica: Cancelar una reservación # features/cancelaciones.feature:1
+  Como usuario autenticado propietario de una reservación
+  Quiero cancelar una reservación que ya no utilizaré
+  Para liberar la sala y permitir que otro usuario pueda reservarla
+  Característica: Cancelar una reservación  # features/cancelaciones.feature:1
+
+  Escenario: CA-07 Cancelar una reservación vigente con anticipación suficiente                 # features/cancelaciones.feature:10
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:19
+    Dado que tengo una reservación vigente de la sala "Sala A" mañana de 10:00 a 11:00          # features/steps/cancelacion_steps.py:48
+    Cuando elijo cancelar la reservación desde mi lista                                         # features/steps/cancelacion_steps.py:81
+    Y confirmo la cancelación                                                                   # features/steps/cancelacion_steps.py:86
+    Entonces mi reservación tiene el estado "CANCELADA"                                         # features/steps/cancelacion_steps.py:119
+    Y mi reservación tiene registrada la fecha y hora de cancelación                            # features/steps/cancelacion_steps.py:134
+    Y veo el mensaje "La reservación se canceló correctamente."                                 # features/steps/reservacion_steps.py:151
+    Y la sala "Sala A" queda disponible mañana de 10:00 a 11:00                                 # features/steps/cancelacion_steps.py:149
+
+  Escenario: CA-08 Impedir que un usuario cancele una reservación ajena                                   # features/cancelaciones.feature:19
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas           # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                                    # features/steps/autenticacion_steps.py:19
+    Dado que existe una reservación vigente de otro usuario para la sala "Sala A" mañana de 12:00 a 13:00 # features/steps/reservacion_steps.py:81
+    Y que tengo una reservación vigente de la sala "Sala A" mañana de 10:00 a 11:00                       # features/steps/cancelacion_steps.py:48
+    Cuando intento cancelar la reservación del otro usuario modificando la petición                       # features/steps/cancelacion_steps.py:102
+    Entonces veo el mensaje "No se encontró la página solicitada."                                        # features/steps/reservacion_steps.py:151
+    Y la reservación del otro usuario conserva el estado "VIGENTE"                                        # features/steps/cancelacion_steps.py:126
+    Y mi reservación tiene el estado "VIGENTE"                                                            # features/steps/cancelacion_steps.py:119
+    Y la respuesta no muestra datos de la reservación del otro usuario                                    # features/steps/cancelacion_steps.py:156
+
+  Esquema del escenario: CA-09 Impedir la cancelación fuera del periodo permitido -- @1.1       # features/cancelaciones.feature:38
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:19
+    Dado que tengo una reservación vigente de la sala "Sala A" que inicia dentro de 60 minutos  # features/steps/cancelacion_steps.py:54
+    Cuando abro mi lista de reservaciones                                                       # features/steps/cancelacion_steps.py:91
+    Entonces no aparece la opción para cancelar mi reservación                                  # features/steps/cancelacion_steps.py:164
+    Cuando intento cancelarla abriendo directamente su confirmación                             # features/steps/cancelacion_steps.py:96
+    Entonces mi reservación tiene el estado "VIGENTE"                                           # features/steps/cancelacion_steps.py:119
+    Y veo el mensaje "El periodo de cancelación ha concluido."                                  # features/steps/reservacion_steps.py:151
+
+  Esquema del escenario: CA-09 Impedir la cancelación fuera del periodo permitido -- @1.2       # features/cancelaciones.feature:39
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:19
+    Dado que tengo una reservación vigente de la sala "Sala A" que inicia dentro de 30 minutos  # features/steps/cancelacion_steps.py:54
+    Cuando abro mi lista de reservaciones                                                       # features/steps/cancelacion_steps.py:91
+    Entonces no aparece la opción para cancelar mi reservación                                  # features/steps/cancelacion_steps.py:164
+    Cuando intento cancelarla abriendo directamente su confirmación                             # features/steps/cancelacion_steps.py:96
+    Entonces mi reservación tiene el estado "VIGENTE"                                           # features/steps/cancelacion_steps.py:119
+    Y veo el mensaje "El periodo de cancelación ha concluido."                                  # features/steps/reservacion_steps.py:151
+
+  Escenario: CA-10 Impedir cancelar nuevamente una reservación cancelada                        # features/cancelaciones.feature:41
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:19
+    Dado que tengo una reservación cancelada de la sala "Sala A" mañana de 10:00 a 11:00        # features/steps/cancelacion_steps.py:64
+    Cuando abro mi lista de reservaciones                                                       # features/steps/cancelacion_steps.py:91
+    Entonces no aparece la opción para cancelar mi reservación                                  # features/steps/cancelacion_steps.py:164
+    Cuando intento cancelarla abriendo directamente su confirmación                             # features/steps/cancelacion_steps.py:96
+    Entonces mi reservación tiene el estado "CANCELADA"                                         # features/steps/cancelacion_steps.py:119
+    Y la fecha de cancelación de mi reservación no cambia                                       # features/steps/cancelacion_steps.py:141
+    Y veo el mensaje "La reservación ya fue cancelada."                                         # features/steps/reservacion_steps.py:151
+
+  Escenario: CA-11 Mantener la trazabilidad de la cancelación                                       # features/cancelaciones.feature:50
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas     # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                              # features/steps/autenticacion_steps.py:19
+    Dado que tengo una reservación vigente de la sala "Sala A" mañana de 10:00 a 11:00              # features/steps/cancelacion_steps.py:48
+    Y que cancelé esa reservación desde mi lista                                                    # features/steps/cancelacion_steps.py:75
+    Cuando abro mi lista de reservaciones                                                           # features/steps/cancelacion_steps.py:91
+    Entonces en mi lista aparece la reservación de "Sala A" de 10:00 a 11:00 con estado "CANCELADA" # features/steps/reservacion_steps.py:158
+    Y en mi lista aparece la fecha y hora en que la cancelé                                         # features/steps/cancelacion_steps.py:176
+
+[15/Nov/2026 20:36:50,232] - Broken pipe from ('127.0.0.1', 61753)
+[15/Nov/2026 20:36:50,233] - Broken pipe from ('127.0.0.1', 55006)
+[15/Nov/2026 20:36:50,233] - Broken pipe from ('127.0.0.1', 53037)
+[15/Nov/2026 20:36:50,233] - Broken pipe from ('127.0.0.1', 55078)
+[15/Nov/2026 20:36:50,233] - Broken pipe from ('127.0.0.1', 53903)
+[15/Nov/2026 20:36:50,233] - Broken pipe from ('127.0.0.1', 50060)
+[15/Nov/2026 20:36:50,233] - Broken pipe from ('127.0.0.1', 49233)
+[15/Nov/2026 20:36:50,233] - Broken pipe from ('127.0.0.1', 58901)
+[15/Nov/2026 20:36:50,234] - Broken pipe from ('127.0.0.1', 55421)
+[15/Nov/2026 20:36:50,234] - Broken pipe from ('127.0.0.1', 56408)
+[15/Nov/2026 20:36:50,234] - Broken pipe from ('127.0.0.1', 58523)
+[15/Nov/2026 20:36:50,234] - Broken pipe from ('127.0.0.1', 64823)
+Destroying test database for alias 'default'...
+1 feature passed, 0 failed, 0 skipped
+6 scenarios passed, 0 failed, 0 skipped
+50 steps passed, 0 failed, 0 skipped
+Took 0min 5.480s
