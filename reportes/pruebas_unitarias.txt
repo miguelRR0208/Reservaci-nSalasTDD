@@ -1,0 +1,197 @@
+$ coverage run manage.py test
+
+Creating test database for alias 'default' ('C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\test_db.sqlite3')...
+Destroying old test database for alias 'default' ('C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\test_db.sqlite3')...
+Found 157 test(s).
+Operations to perform:
+  Synchronize unmigrated apps: behave_django, messages, staticfiles
+  Apply all migrations: admin, auth, contenttypes, reservaciones, salas, sessions
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying salas.0001_initial... OK
+  Applying salas.0002_salas_iniciales... OK
+  Applying reservaciones.0001_initial... OK
+  Applying sessions.0001_initial...test_cerrar_sesion_regresa_al_login (reservaciones.tests.tests_autenticacion.TestAutenticacion.test_cerrar_sesion_regresa_al_login) ... ok
+test_login_invalido_muestra_mensaje (reservaciones.tests.tests_autenticacion.TestAutenticacion.test_login_invalido_muestra_mensaje) ... ok
+test_login_valido_lleva_a_mis_reservaciones (reservaciones.tests.tests_autenticacion.TestAutenticacion.test_login_valido_lleva_a_mis_reservaciones) ... ok
+test_pagina_de_login_usa_su_plantilla (reservaciones.tests.tests_autenticacion.TestAutenticacion.test_pagina_de_login_usa_su_plantilla) ... ok
+test_raiz_del_sitio_lleva_a_mis_reservaciones (reservaciones.tests.tests_autenticacion.TestAutenticacion.test_raiz_del_sitio_lleva_a_mis_reservaciones) ... ok
+test_admin_es_superusuario (reservaciones.tests.tests_comandos.TestComandoUsuariosDePrueba.test_admin_es_superusuario) ... ok
+test_crea_usuarios_que_pueden_iniciar_sesion (reservaciones.tests.tests_comandos.TestComandoUsuariosDePrueba.test_crea_usuarios_que_pueden_iniciar_sesion) ... ok
+test_ejecutarlo_dos_veces_no_duplica_usuarios (reservaciones.tests.tests_comandos.TestComandoUsuariosDePrueba.test_ejecutarlo_dos_veces_no_duplica_usuarios) ... ok
+test_informa_los_usuarios_listos (reservaciones.tests.tests_comandos.TestComandoUsuariosDePrueba.test_informa_los_usuarios_listos) ... ok
+test_restablece_la_contrasena_si_fue_cambiada (reservaciones.tests.tests_comandos.TestComandoUsuariosDePrueba.test_restablece_la_contrasena_si_fue_cambiada) ... ok
+test_usuarios_normales_no_son_administradores (reservaciones.tests.tests_comandos.TestComandoUsuariosDePrueba.test_usuarios_normales_no_son_administradores) ... ok
+test_detecta_horario_contenido_en_el_existente (reservaciones.tests.tests_disponibilidad.TestDisponibilidad.test_detecta_horario_contenido_en_el_existente) ... ok
+test_detecta_horario_identico (reservaciones.tests.tests_disponibilidad.TestDisponibilidad.test_detecta_horario_identico) ... ok
+test_detecta_horario_que_contiene_al_existente (reservaciones.tests.tests_disponibilidad.TestDisponibilidad.test_detecta_horario_que_contiene_al_existente) ... ok
+test_detecta_traslape_parcial_al_final (reservaciones.tests.tests_disponibilidad.TestDisponibilidad.test_detecta_traslape_parcial_al_final) ... ok
+test_detecta_traslape_parcial_al_inicio (reservaciones.tests.tests_disponibilidad.TestDisponibilidad.test_detecta_traslape_parcial_al_inicio) ... ok
+test_ignora_reservaciones_canceladas (reservaciones.tests.tests_disponibilidad.TestDisponibilidad.test_ignora_reservaciones_canceladas) ... ok
+test_permite_horario_adyacente_anterior (reservaciones.tests.tests_disponibilidad.TestDisponibilidad.test_permite_horario_adyacente_anterior) ... ok
+test_permite_horario_adyacente_posterior (reservaciones.tests.tests_disponibilidad.TestDisponibilidad.test_permite_horario_adyacente_posterior) ... ok
+test_permite_mismo_horario_en_otra_fecha (reservaciones.tests.tests_disponibilidad.TestDisponibilidad.test_permite_mismo_horario_en_otra_fecha) ... ok
+test_permite_mismo_horario_en_otra_sala (reservaciones.tests.tests_disponibilidad.TestDisponibilidad.test_permite_mismo_horario_en_otra_sala) ... ok
+test_regresa_las_reservaciones_que_chocan (reservaciones.tests.tests_disponibilidad.TestDisponibilidad.test_regresa_las_reservaciones_que_chocan) ... ok
+test_acepta_asistentes_igual_a_capacidad (reservaciones.tests.tests_forms.TestFormularioReservacion.test_acepta_asistentes_igual_a_capacidad) ... ok
+test_acepta_datos_validos (reservaciones.tests.tests_forms.TestFormularioReservacion.test_acepta_datos_validos) ... ok
+test_acepta_fecha_de_hoy (reservaciones.tests.tests_forms.TestFormularioReservacion.test_acepta_fecha_de_hoy) ... ok
+test_acepta_horario_en_los_limites (reservaciones.tests.tests_forms.TestFormularioReservacion.test_acepta_horario_en_los_limites) ... ok
+test_acepta_proposito_de_10_caracteres (reservaciones.tests.tests_forms.TestFormularioReservacion.test_acepta_proposito_de_10_caracteres) ... ok
+test_acepta_proposito_de_200_caracteres (reservaciones.tests.tests_forms.TestFormularioReservacion.test_acepta_proposito_de_200_caracteres) ... ok
+test_quita_espacios_al_inicio_y_final_del_proposito (reservaciones.tests.tests_forms.TestFormularioReservacion.test_quita_espacios_al_inicio_y_final_del_proposito) ... ok
+test_rechaza_asistentes_con_decimales (reservaciones.tests.tests_forms.TestFormularioReservacion.test_rechaza_asistentes_con_decimales) ... ok
+test_rechaza_asistentes_con_texto (reservaciones.tests.tests_forms.TestFormularioReservacion.test_rechaza_asistentes_con_texto) ... ok
+test_rechaza_asistentes_mayor_a_capacidad (reservaciones.tests.tests_forms.TestFormularioReservacion.test_rechaza_asistentes_mayor_a_capacidad) ... ok
+test_rechaza_asistentes_negativos (reservaciones.tests.tests_forms.TestFormularioReservacion.test_rechaza_asistentes_negativos) ... ok
+test_rechaza_cero_asistentes (reservaciones.tests.tests_forms.TestFormularioReservacion.test_rechaza_cero_asistentes) ... ok
+test_rechaza_fecha_con_formato_incorrecto (reservaciones.tests.tests_forms.TestFormularioReservacion.test_rechaza_fecha_con_formato_incorrecto) ... ok
+test_rechaza_fecha_pasada (reservaciones.tests.tests_forms.TestFormularioReservacion.test_rechaza_fecha_pasada) ... ok
+test_rechaza_fin_despues_de_las_20_00 (reservaciones.tests.tests_forms.TestFormularioReservacion.test_rechaza_fin_despues_de_las_20_00) ... ok
+test_rechaza_hora_con_formato_incorrecto (reservaciones.tests.tests_forms.TestFormularioReservacion.test_rechaza_hora_con_formato_incorrecto) ... ok
+test_rechaza_hora_fin_antes_de_inicio (reservaciones.tests.tests_forms.TestFormularioReservacion.test_rechaza_hora_fin_antes_de_inicio) ... ok
+test_rechaza_hora_fin_igual_a_inicio (reservaciones.tests.tests_forms.TestFormularioReservacion.test_rechaza_hora_fin_igual_a_inicio) ... ok
+test_rechaza_inicio_antes_de_las_08_00 (reservaciones.tests.tests_forms.TestFormularioReservacion.test_rechaza_inicio_antes_de_las_08_00) ... ok
+test_rechaza_inicio_despues_de_las_19_00 (reservaciones.tests.tests_forms.TestFormularioReservacion.test_rechaza_inicio_despues_de_las_19_00) ... ok
+test_rechaza_proposito_corto_rodeado_de_espacios (reservaciones.tests.tests_forms.TestFormularioReservacion.test_rechaza_proposito_corto_rodeado_de_espacios) ... ok
+test_rechaza_proposito_de_201_caracteres (reservaciones.tests.tests_forms.TestFormularioReservacion.test_rechaza_proposito_de_201_caracteres) ... ok
+test_rechaza_proposito_menor_a_10_caracteres (reservaciones.tests.tests_forms.TestFormularioReservacion.test_rechaza_proposito_menor_a_10_caracteres) ... ok
+test_rechaza_sala_inactiva (reservaciones.tests.tests_forms.TestFormularioReservacion.test_rechaza_sala_inactiva) ... ok
+test_rechaza_sala_inexistente (reservaciones.tests.tests_forms.TestFormularioReservacion.test_rechaza_sala_inexistente) ... ok
+test_solo_ofrece_salas_activas (reservaciones.tests.tests_forms.TestFormularioReservacion.test_solo_ofrece_salas_activas) ... ok
+test_todos_los_campos_son_obligatorios (reservaciones.tests.tests_forms.TestFormularioReservacion.test_todos_los_campos_son_obligatorios) ... ok
+test_fecha_de_cancelacion_vacia_al_crear (reservaciones.tests.tests_models.TestModeloReservacion.test_fecha_de_cancelacion_vacia_al_crear) ... ok
+test_guarda_reservacion_con_estado_vigente (reservaciones.tests.tests_models.TestModeloReservacion.test_guarda_reservacion_con_estado_vigente) ... ok
+test_no_permite_borrar_sala_con_reservaciones (reservaciones.tests.tests_models.TestModeloReservacion.test_no_permite_borrar_sala_con_reservaciones) ... ok
+test_rechaza_cero_asistentes (reservaciones.tests.tests_models.TestModeloReservacion.test_rechaza_cero_asistentes) ... ok
+test_rechaza_estado_desconocido (reservaciones.tests.tests_models.TestModeloReservacion.test_rechaza_estado_desconocido) ... ok
+test_rechaza_proposito_mayor_a_200_caracteres (reservaciones.tests.tests_models.TestModeloReservacion.test_rechaza_proposito_mayor_a_200_caracteres) ... ok
+test_registra_fecha_de_creacion_automaticamente (reservaciones.tests.tests_models.TestModeloReservacion.test_registra_fecha_de_creacion_automaticamente) ... ok
+test_solo_existen_estados_vigente_y_cancelada (reservaciones.tests.tests_models.TestModeloReservacion.test_solo_existen_estados_vigente_y_cancelada) ... ok
+test_str_muestra_sala_fecha_y_horario (reservaciones.tests.tests_models.TestModeloReservacion.test_str_muestra_sala_fecha_y_horario) ... ok
+test_usuario_puede_consultar_sus_reservaciones (reservaciones.tests.tests_models.TestModeloReservacion.test_usuario_puede_consultar_sus_reservaciones) ... ok
+test_cancela_reservacion_propia_vigente_y_a_tiempo (reservaciones.tests.tests_servicios.TestCancelarReservacion.test_cancela_reservacion_propia_vigente_y_a_tiempo) ... ok
+test_no_elimina_la_reservacion (reservaciones.tests.tests_servicios.TestCancelarReservacion.test_no_elimina_la_reservacion) ... ok
+test_rechaza_cancelar_con_60_minutos_exactos (reservaciones.tests.tests_servicios.TestCancelarReservacion.test_rechaza_cancelar_con_60_minutos_exactos) ... ok
+test_rechaza_cancelar_con_menos_de_60_minutos (reservaciones.tests.tests_servicios.TestCancelarReservacion.test_rechaza_cancelar_con_menos_de_60_minutos) ... ok
+test_rechaza_cancelar_reservacion_ajena (reservaciones.tests.tests_servicios.TestCancelarReservacion.test_rechaza_cancelar_reservacion_ajena) ... ok
+test_rechaza_segunda_cancelacion_sin_cambiar_la_fecha (reservaciones.tests.tests_servicios.TestCancelarReservacion.test_rechaza_segunda_cancelacion_sin_cambiar_la_fecha) ... ok
+test_revisa_el_estado_guardado_en_base_de_datos (reservaciones.tests.tests_servicios.TestCancelarReservacion.test_revisa_el_estado_guardado_en_base_de_datos) ... ok
+test_usa_la_hora_actual_si_no_se_indica (reservaciones.tests.tests_servicios.TestCancelarReservacion.test_usa_la_hora_actual_si_no_se_indica) ... ok
+test_horario_cancelado_se_puede_reservar_de_nuevo (reservaciones.tests.tests_servicios.TestCancelarYVolverAReservar.test_horario_cancelado_se_puede_reservar_de_nuevo) ... ok
+test_acepta_duraciones_limite (reservaciones.tests.tests_servicios.TestCrearReservacion.test_acepta_duraciones_limite) ... ok
+test_ignora_reservaciones_canceladas (reservaciones.tests.tests_servicios.TestCrearReservacion.test_ignora_reservaciones_canceladas) ... ok
+test_permite_horarios_adyacentes (reservaciones.tests.tests_servicios.TestCrearReservacion.test_permite_horarios_adyacentes) ... ok
+test_rechaza_asistentes_mayor_a_capacidad (reservaciones.tests.tests_servicios.TestCrearReservacion.test_rechaza_asistentes_mayor_a_capacidad) ... ok
+test_rechaza_duracion_mayor_a_2_horas (reservaciones.tests.tests_servicios.TestCrearReservacion.test_rechaza_duracion_mayor_a_2_horas) ... ok
+test_rechaza_duracion_menor_a_30_minutos (reservaciones.tests.tests_servicios.TestCrearReservacion.test_rechaza_duracion_menor_a_30_minutos) ... ok
+test_rechaza_fecha_pasada (reservaciones.tests.tests_servicios.TestCrearReservacion.test_rechaza_fecha_pasada) ... ok
+test_rechaza_fin_no_posterior_al_inicio (reservaciones.tests.tests_servicios.TestCrearReservacion.test_rechaza_fin_no_posterior_al_inicio) ... ok
+test_rechaza_horario_contenido (reservaciones.tests.tests_servicios.TestCrearReservacion.test_rechaza_horario_contenido) ... ok
+test_rechaza_inicio_fuera_de_horario (reservaciones.tests.tests_servicios.TestCrearReservacion.test_rechaza_inicio_fuera_de_horario) ... ok
+test_rechaza_sala_inactiva (reservaciones.tests.tests_servicios.TestCrearReservacion.test_rechaza_sala_inactiva) ... ok
+test_rechaza_traslape_parcial (reservaciones.tests.tests_servicios.TestCrearReservacion.test_rechaza_traslape_parcial) ... ok
+test_rechaza_traslape_total (reservaciones.tests.tests_servicios.TestCrearReservacion.test_rechaza_traslape_total) ... ok
+test_registra_reservacion_valida_como_vigente (reservaciones.tests.tests_servicios.TestCrearReservacion.test_registra_reservacion_valida_como_vigente) ... ok
+test_revisa_sala_actualizada_en_base_de_datos (reservaciones.tests.tests_servicios.TestCrearReservacion.test_revisa_sala_actualizada_en_base_de_datos) ... ok
+test_get_a_reservacion_ajena_responde_404 (reservaciones.tests.tests_views.TestVistaCancelarReservacion.test_get_a_reservacion_ajena_responde_404) ... ok
+test_get_anonimo_es_enviado_al_login (reservaciones.tests.tests_views.TestVistaCancelarReservacion.test_get_anonimo_es_enviado_al_login) ... ok
+test_get_muestra_la_confirmacion_sin_cancelar (reservaciones.tests.tests_views.TestVistaCancelarReservacion.test_get_muestra_la_confirmacion_sin_cancelar) ... ok
+test_post_a_reservacion_ajena_responde_404_sin_cambios (reservaciones.tests.tests_views.TestVistaCancelarReservacion.test_post_a_reservacion_ajena_responde_404_sin_cambios) ... ok
+test_post_a_reservacion_cancelada_muestra_mensaje (reservaciones.tests.tests_views.TestVistaCancelarReservacion.test_post_a_reservacion_cancelada_muestra_mensaje) ... ok
+test_post_anonimo_no_cancela (reservaciones.tests.tests_views.TestVistaCancelarReservacion.test_post_anonimo_no_cancela) ... ok
+test_post_cancela_y_redirige_con_mensaje (reservaciones.tests.tests_views.TestVistaCancelarReservacion.test_post_cancela_y_redirige_con_mensaje) ... ok
+test_post_fuera_de_periodo_muestra_mensaje (reservaciones.tests.tests_views.TestVistaCancelarReservacion.test_post_fuera_de_periodo_muestra_mensaje) ... ok
+test_post_sin_token_csrf_es_rechazado (reservaciones.tests.tests_views.TestVistaCancelarReservacion.test_post_sin_token_csrf_es_rechazado) ... ok
+test_reservacion_inexistente_responde_404 (reservaciones.tests.tests_views.TestVistaCancelarReservacion.test_reservacion_inexistente_responde_404) ... ok
+test_avisa_cuando_no_hay_reservaciones (reservaciones.tests.tests_views.TestVistaListaReservaciones.test_avisa_cuando_no_hay_reservaciones) ... ok
+test_muestra_enlace_para_cancelar_cuando_se_puede (reservaciones.tests.tests_views.TestVistaListaReservaciones.test_muestra_enlace_para_cancelar_cuando_se_puede) ... ok
+test_muestra_fecha_y_hora_de_cancelacion (reservaciones.tests.tests_views.TestVistaListaReservaciones.test_muestra_fecha_y_hora_de_cancelacion) ... ok
+test_muestra_las_reservaciones_del_usuario (reservaciones.tests.tests_views.TestVistaListaReservaciones.test_muestra_las_reservaciones_del_usuario) ... ok
+test_no_muestra_enlace_para_cancelar_una_cancelada (reservaciones.tests.tests_views.TestVistaListaReservaciones.test_no_muestra_enlace_para_cancelar_una_cancelada) ... ok
+test_no_muestra_enlace_si_falta_una_hora_o_menos (reservaciones.tests.tests_views.TestVistaListaReservaciones.test_no_muestra_enlace_si_falta_una_hora_o_menos) ... ok
+test_no_muestra_reservaciones_de_otros_usuarios (reservaciones.tests.tests_views.TestVistaListaReservaciones.test_no_muestra_reservaciones_de_otros_usuarios) ... ok
+test_tiene_enlace_para_nueva_reservacion (reservaciones.tests.tests_views.TestVistaListaReservaciones.test_tiene_enlace_para_nueva_reservacion) ... ok
+test_usuario_anonimo_es_enviado_al_login (reservaciones.tests.tests_views.TestVistaListaReservaciones.test_usuario_anonimo_es_enviado_al_login) ... ok
+test_muestra_formulario_con_salas_activas (reservaciones.tests.tests_views.TestVistaNuevaReservacion.test_muestra_formulario_con_salas_activas) ... ok
+test_post_anonimo_no_registra_nada (reservaciones.tests.tests_views.TestVistaNuevaReservacion.test_post_anonimo_no_registra_nada) ... ok
+test_post_con_duracion_invalida_muestra_error_del_servicio (reservaciones.tests.tests_views.TestVistaNuevaReservacion.test_post_con_duracion_invalida_muestra_error_del_servicio) ... ok
+test_post_invalido_conserva_datos_y_muestra_error (reservaciones.tests.tests_views.TestVistaNuevaReservacion.test_post_invalido_conserva_datos_y_muestra_error) ... ok
+test_post_sin_token_csrf_es_rechazado (reservaciones.tests.tests_views.TestVistaNuevaReservacion.test_post_sin_token_csrf_es_rechazado) ... ok
+test_post_traslapado_muestra_que_la_sala_no_esta_disponible (reservaciones.tests.tests_views.TestVistaNuevaReservacion.test_post_traslapado_muestra_que_la_sala_no_esta_disponible) ... ok
+test_post_valido_registra_y_redirige_con_mensaje (reservaciones.tests.tests_views.TestVistaNuevaReservacion.test_post_valido_registra_y_redirige_con_mensaje) ... ok
+test_usuario_anonimo_es_enviado_al_login (reservaciones.tests.tests_views.TestVistaNuevaReservacion.test_usuario_anonimo_es_enviado_al_login) ... ok
+test_existen_las_cuatro_salas_iniciales (salas.tests.tests_datos_iniciales.TestDatosInicialesSalas.test_existen_las_cuatro_salas_iniciales) ... ok
+test_salas_iniciales_tienen_datos_correctos (salas.tests.tests_datos_iniciales.TestDatosInicialesSalas.test_salas_iniciales_tienen_datos_correctos) ... ok
+test_capacidad_cero_no_es_valida (salas.tests.tests_models.TestModeloSala.test_capacidad_cero_no_es_valida) ... ok
+test_capacidad_negativa_no_es_valida (salas.tests.tests_models.TestModeloSala.test_capacidad_negativa_no_es_valida) ... ok
+test_capacidad_uno_es_valida (salas.tests.tests_models.TestModeloSala.test_capacidad_uno_es_valida) ... ok
+test_guarda_sala_con_datos_validos (salas.tests.tests_models.TestModeloSala.test_guarda_sala_con_datos_validos) ... ok
+test_nombre_es_requerido (salas.tests.tests_models.TestModeloSala.test_nombre_es_requerido) ... ok
+test_nombre_no_excede_100_caracteres (salas.tests.tests_models.TestModeloSala.test_nombre_no_excede_100_caracteres) ... ok
+test_nombre_no_se_puede_repetir (salas.tests.tests_models.TestModeloSala.test_nombre_no_se_puede_repetir) ... ok
+test_sala_es_activa_por_defecto (salas.tests.tests_models.TestModeloSala.test_sala_es_activa_por_defecto) ... ok
+test_str_regresa_nombre (salas.tests.tests_models.TestModeloSala.test_str_regresa_nombre) ... ok
+test_ubicacion_es_requerida (salas.tests.tests_models.TestModeloSala.test_ubicacion_es_requerida) ... ok
+test_activas_incluye_salas_iniciales_activas (salas.tests.tests_models.TestSalasActivas.test_activas_incluye_salas_iniciales_activas) ... ok
+test_activas_solo_regresa_salas_activas (salas.tests.tests_models.TestSalasActivas.test_activas_solo_regresa_salas_activas) ... ok
+test_la_segunda_solicitud_recibe_respuesta_controlada (reservaciones.tests.tests_concurrencia.TestReservacionesConcurrentes.test_la_segunda_solicitud_recibe_respuesta_controlada) ... ok
+test_solo_una_reservacion_queda_vigente (reservaciones.tests.tests_concurrencia.TestReservacionesConcurrentes.test_solo_una_reservacion_queda_vigente) ... ok
+test_acepta_asistentes_igual_a_capacidad (reservaciones.tests.tests_reglas.TestReglaCapacidad.test_acepta_asistentes_igual_a_capacidad) ... ok
+test_rechaza_asistentes_mayor_a_capacidad (reservaciones.tests.tests_reglas.TestReglaCapacidad.test_rechaza_asistentes_mayor_a_capacidad) ... ok
+test_acepta_2_horas_exactas (reservaciones.tests.tests_reglas.TestReglaDuracion.test_acepta_2_horas_exactas) ... ok
+test_acepta_30_minutos_exactos (reservaciones.tests.tests_reglas.TestReglaDuracion.test_acepta_30_minutos_exactos) ... ok
+test_rechaza_mas_de_2_horas (reservaciones.tests.tests_reglas.TestReglaDuracion.test_rechaza_mas_de_2_horas) ... ok
+test_rechaza_menos_de_30_minutos (reservaciones.tests.tests_reglas.TestReglaDuracion.test_rechaza_menos_de_30_minutos) ... ok
+test_acepta_fecha_de_hoy (reservaciones.tests.tests_reglas.TestReglaFecha.test_acepta_fecha_de_hoy) ... ok
+test_acepta_fecha_futura (reservaciones.tests.tests_reglas.TestReglaFecha.test_acepta_fecha_futura) ... ok
+test_rechaza_fecha_de_ayer (reservaciones.tests.tests_reglas.TestReglaFecha.test_rechaza_fecha_de_ayer) ... ok
+test_acepta_fin_a_las_20_00 (reservaciones.tests.tests_reglas.TestReglaHoraFin.test_acepta_fin_a_las_20_00) ... ok
+test_acepta_fin_posterior_al_inicio (reservaciones.tests.tests_reglas.TestReglaHoraFin.test_acepta_fin_posterior_al_inicio) ... ok
+test_rechaza_fin_anterior_al_inicio (reservaciones.tests.tests_reglas.TestReglaHoraFin.test_rechaza_fin_anterior_al_inicio) ... ok
+test_rechaza_fin_despues_de_las_20_00 (reservaciones.tests.tests_reglas.TestReglaHoraFin.test_rechaza_fin_despues_de_las_20_00) ... ok
+test_rechaza_fin_igual_al_inicio (reservaciones.tests.tests_reglas.TestReglaHoraFin.test_rechaza_fin_igual_al_inicio) ... ok
+test_acepta_limites_08_00_y_19_00 (reservaciones.tests.tests_reglas.TestReglaHoraInicio.test_acepta_limites_08_00_y_19_00) ... ok
+test_rechaza_antes_de_las_08_00 (reservaciones.tests.tests_reglas.TestReglaHoraInicio.test_rechaza_antes_de_las_08_00) ... ok
+test_rechaza_despues_de_las_19_00 (reservaciones.tests.tests_reglas.TestReglaHoraInicio.test_rechaza_despues_de_las_19_00) ... ok
+test_acepta_sala_activa (reservaciones.tests.tests_reglas.TestReglaSalaActiva.test_acepta_sala_activa) ... ok
+test_rechaza_sala_inactiva (reservaciones.tests.tests_reglas.TestReglaSalaActiva.test_rechaza_sala_inactiva) ... ok
+test_acepta_al_propietario (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_acepta_al_propietario) ... ok
+test_acepta_cancelar_con_mas_de_60_minutos (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_acepta_cancelar_con_mas_de_60_minutos) ... ok
+test_acepta_reservacion_vigente (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_acepta_reservacion_vigente) ... ok
+test_inicio_junta_fecha_y_hora_en_la_zona_local (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_inicio_junta_fecha_y_hora_en_la_zona_local) ... ok
+test_no_se_puede_cancelar_si_ya_esta_cancelada (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_no_se_puede_cancelar_si_ya_esta_cancelada) ... ok
+test_no_se_puede_cancelar_si_ya_no_hay_tiempo (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_no_se_puede_cancelar_si_ya_no_hay_tiempo) ... ok
+test_rechaza_a_otro_usuario (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_rechaza_a_otro_usuario) ... ok
+test_rechaza_cancelar_con_60_minutos_exactos (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_rechaza_cancelar_con_60_minutos_exactos) ... ok
+test_rechaza_cancelar_con_menos_de_60_minutos (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_rechaza_cancelar_con_menos_de_60_minutos) ... ok
+test_rechaza_cancelar_una_reservacion_ya_iniciada (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_rechaza_cancelar_una_reservacion_ya_iniciada) ... ok
+test_rechaza_reservacion_cancelada (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_rechaza_reservacion_cancelada) ... ok
+test_se_puede_cancelar_si_esta_vigente_y_a_tiempo (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_se_puede_cancelar_si_esta_vigente_y_a_tiempo) ... ok
+
+----------------------------------------------------------------------
+Ran 157 tests in 2.201s
+
+OK
+Destroying test database for alias 'default' ('C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\test_db.sqlite3')...
+ OK
+System check identified no issues (0 silenced).
