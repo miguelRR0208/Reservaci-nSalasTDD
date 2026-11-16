@@ -1,0 +1,275 @@
+Creating test database for alias 'default'...
+Destroying old test database for alias 'default'...
+USING RUNNER: behave.runner:Runner
+Característica: Cancelar una reservación # features/cancelaciones.feature:1
+  Como usuario autenticado propietario de una reservación
+  Quiero cancelar una reservación que ya no utilizaré
+  Para liberar la sala y permitir que otro usuario pueda reservarla
+  Característica: Cancelar una reservación  # features/cancelaciones.feature:1
+
+  Escenario: CA-07 Cancelar una reservación vigente con anticipación suficiente                 # features/cancelaciones.feature:10
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:19
+    Dado que tengo una reservación vigente de la sala "Sala A" mañana de 10:00 a 11:00          # features/steps/cancelacion_steps.py:48
+    Cuando elijo cancelar la reservación desde mi lista                                         # features/steps/cancelacion_steps.py:81
+      Traceback (most recent call last):
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\model.py", line 1991, in run
+          match.run(runner.context)
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\matchers.py", line 105, in run
+          self.func(context, *args, **kwargs)
+        File "features\steps\cancelacion_steps.py", line 83, in elijo_cancelar
+          cancelar_desde_lista(context)
+        File "features\steps\cancelacion_steps.py", line 45, in cancelar_desde_lista
+          context.navegador.find_element(By.ID, enlace).click()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 974, in find_element
+          return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 566, in execute
+          self.error_handler.check_response(response)
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 234, in check_response
+          raise exception_class(message, screen, stacktrace)
+      selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="cancelar-1"]"}
+        (Session info: chrome=157.0.8103.51); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+      Stacktrace:
+      Symbols not available. Dumping unresolved backtrace:
+      	(No symbol) [0x7ff7430ad655]
+      	(No symbol) [0x7ff742fa4790]
+      	(No symbol) [0x7ff742e12fb3]
+      	(No symbol) [0x7ff7436561e1]
+      	(No symbol) [0x7ff74365643c]
+      	(No symbol) [0x7ff743684337]
+      	(No symbol) [0x7ff742e46bf1]
+      	(No symbol) [0x7ff742e2c109]
+      	(No symbol) [0x7ff742e2d433]
+      	(No symbol) [0x7ff743547041]
+      	(No symbol) [0x7ff743565c76]
+      	(No symbol) [0x7ff74355c340]
+      	(No symbol) [0x7ff7431dc9be]
+      	(No symbol) [0x7ff742fb2fa5]
+      	(No symbol) [0x7ff742fae2d4]
+      	(No symbol) [0x7ff742fae464]
+      	(No symbol) [0x7ff742f9731c]
+      	(No symbol) [0x7ffe8c20dda7]
+      	(No symbol) [0x7ffe8e1bee4c]
+
+    Y confirmo la cancelación                                                                   # None
+    Entonces mi reservación tiene el estado "CANCELADA"                                         # None
+    Y mi reservación tiene registrada la fecha y hora de cancelación                            # None
+    Y veo el mensaje "La reservación se canceló correctamente."                                 # None
+    Y la sala "Sala A" queda disponible mañana de 10:00 a 11:00                                 # None
+
+  Escenario: CA-08 Impedir que un usuario cancele una reservación ajena                                   # features/cancelaciones.feature:19
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas           # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                                    # features/steps/autenticacion_steps.py:19
+    Dado que existe una reservación vigente de otro usuario para la sala "Sala A" mañana de 12:00 a 13:00 # features/steps/reservacion_steps.py:81
+    Y que tengo una reservación vigente de la sala "Sala A" mañana de 10:00 a 11:00                       # features/steps/cancelacion_steps.py:48
+    Cuando intento cancelar la reservación del otro usuario modificando la petición                       # features/steps/cancelacion_steps.py:102
+      Traceback (most recent call last):
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\model.py", line 1991, in run
+          match.run(runner.context)
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\matchers.py", line 105, in run
+          self.func(context, *args, **kwargs)
+        File "features\steps\cancelacion_steps.py", line 108, in cancelo_reservacion_ajena
+          context.navegador.get(url_de_cancelacion(context, context.reservacion))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "features\steps\cancelacion_steps.py", line 29, in url_de_cancelacion
+          return context.get_url('reservaciones:cancelar', reservacion.pk)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave_django\environment.py", line 36, in get_url
+          url = resolve_url(to, *args, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+          return reverse(to, args=args, kwargs=kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+          resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+          raise NoReverseMatch(msg)
+      django.urls.exceptions.NoReverseMatch: Reverse for 'cancelar' not found. 'cancelar' is not a valid view function or pattern name.
+
+    Entonces veo el mensaje "No se encontró la página solicitada."                                        # None
+    Y la reservación del otro usuario conserva el estado "VIGENTE"                                        # None
+    Y mi reservación tiene el estado "VIGENTE"                                                            # None
+    Y la respuesta no muestra datos de la reservación del otro usuario                                    # None
+
+  Esquema del escenario: CA-09 Impedir la cancelación fuera del periodo permitido -- @1.1       # features/cancelaciones.feature:38
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:19
+    Dado que tengo una reservación vigente de la sala "Sala A" que inicia dentro de 60 minutos  # features/steps/cancelacion_steps.py:54
+    Cuando abro mi lista de reservaciones                                                       # features/steps/cancelacion_steps.py:91
+    Entonces no aparece la opción para cancelar mi reservación                                  # features/steps/cancelacion_steps.py:164
+    Cuando intento cancelarla abriendo directamente su confirmación                             # features/steps/cancelacion_steps.py:96
+      Traceback (most recent call last):
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\model.py", line 1991, in run
+          match.run(runner.context)
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\matchers.py", line 105, in run
+          self.func(context, *args, **kwargs)
+        File "features\steps\cancelacion_steps.py", line 98, in cancelo_por_url
+          context.navegador.get(url_de_cancelacion(context, context.reservacion))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "features\steps\cancelacion_steps.py", line 29, in url_de_cancelacion
+          return context.get_url('reservaciones:cancelar', reservacion.pk)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave_django\environment.py", line 36, in get_url
+          url = resolve_url(to, *args, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+          return reverse(to, args=args, kwargs=kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+          resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+          raise NoReverseMatch(msg)
+      django.urls.exceptions.NoReverseMatch: Reverse for 'cancelar' not found. 'cancelar' is not a valid view function or pattern name.
+
+    Entonces mi reservación tiene el estado "VIGENTE"                                           # None
+    Y veo el mensaje "El periodo de cancelación ha concluido."                                  # None
+
+  Esquema del escenario: CA-09 Impedir la cancelación fuera del periodo permitido -- @1.2       # features/cancelaciones.feature:39
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:19
+    Dado que tengo una reservación vigente de la sala "Sala A" que inicia dentro de 30 minutos  # features/steps/cancelacion_steps.py:54
+    Cuando abro mi lista de reservaciones                                                       # features/steps/cancelacion_steps.py:91
+    Entonces no aparece la opción para cancelar mi reservación                                  # features/steps/cancelacion_steps.py:164
+    Cuando intento cancelarla abriendo directamente su confirmación                             # features/steps/cancelacion_steps.py:96
+      Traceback (most recent call last):
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\model.py", line 1991, in run
+          match.run(runner.context)
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\matchers.py", line 105, in run
+          self.func(context, *args, **kwargs)
+        File "features\steps\cancelacion_steps.py", line 98, in cancelo_por_url
+          context.navegador.get(url_de_cancelacion(context, context.reservacion))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "features\steps\cancelacion_steps.py", line 29, in url_de_cancelacion
+          return context.get_url('reservaciones:cancelar', reservacion.pk)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave_django\environment.py", line 36, in get_url
+          url = resolve_url(to, *args, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+          return reverse(to, args=args, kwargs=kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+          resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+          raise NoReverseMatch(msg)
+      django.urls.exceptions.NoReverseMatch: Reverse for 'cancelar' not found. 'cancelar' is not a valid view function or pattern name.
+
+    Entonces mi reservación tiene el estado "VIGENTE"                                           # None
+    Y veo el mensaje "El periodo de cancelación ha concluido."                                  # None
+
+  Escenario: CA-10 Impedir cancelar nuevamente una reservación cancelada                        # features/cancelaciones.feature:41
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:19
+    Dado que tengo una reservación cancelada de la sala "Sala A" mañana de 10:00 a 11:00        # features/steps/cancelacion_steps.py:64
+    Cuando abro mi lista de reservaciones                                                       # features/steps/cancelacion_steps.py:91
+    Entonces no aparece la opción para cancelar mi reservación                                  # features/steps/cancelacion_steps.py:164
+    Cuando intento cancelarla abriendo directamente su confirmación                             # features/steps/cancelacion_steps.py:96
+      Traceback (most recent call last):
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\model.py", line 1991, in run
+          match.run(runner.context)
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\matchers.py", line 105, in run
+          self.func(context, *args, **kwargs)
+        File "features\steps\cancelacion_steps.py", line 98, in cancelo_por_url
+          context.navegador.get(url_de_cancelacion(context, context.reservacion))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "features\steps\cancelacion_steps.py", line 29, in url_de_cancelacion
+          return context.get_url('reservaciones:cancelar', reservacion.pk)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave_django\environment.py", line 36, in get_url
+          url = resolve_url(to, *args, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\shortcuts.py", line 184, in resolve_url
+          return reverse(to, args=args, kwargs=kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+          resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+          raise NoReverseMatch(msg)
+      django.urls.exceptions.NoReverseMatch: Reverse for 'cancelar' not found. 'cancelar' is not a valid view function or pattern name.
+
+    Entonces mi reservación tiene el estado "CANCELADA"                                         # None
+    Y la fecha de cancelación de mi reservación no cambia                                       # None
+    Y veo el mensaje "La reservación ya fue cancelada."                                         # None
+
+  Escenario: CA-11 Mantener la trazabilidad de la cancelación                                       # features/cancelaciones.feature:50
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas     # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                              # features/steps/autenticacion_steps.py:19
+    Dado que tengo una reservación vigente de la sala "Sala A" mañana de 10:00 a 11:00              # features/steps/cancelacion_steps.py:48
+    Y que cancelé esa reservación desde mi lista                                                    # features/steps/cancelacion_steps.py:75
+      Traceback (most recent call last):
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\model.py", line 1991, in run
+          match.run(runner.context)
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\behave\matchers.py", line 105, in run
+          self.func(context, *args, **kwargs)
+        File "features\steps\cancelacion_steps.py", line 77, in cancele_desde_lista
+          cancelar_desde_lista(context)
+        File "features\steps\cancelacion_steps.py", line 45, in cancelar_desde_lista
+          context.navegador.find_element(By.ID, enlace).click()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 974, in find_element
+          return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 566, in execute
+          self.error_handler.check_response(response)
+        File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 234, in check_response
+          raise exception_class(message, screen, stacktrace)
+      selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="cancelar-7"]"}
+        (Session info: chrome=157.0.8103.51); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+      Stacktrace:
+      Symbols not available. Dumping unresolved backtrace:
+      	(No symbol) [0x7ff7430ad655]
+      	(No symbol) [0x7ff742fa4790]
+      	(No symbol) [0x7ff742e12fb3]
+      	(No symbol) [0x7ff7436561e1]
+      	(No symbol) [0x7ff74365643c]
+      	(No symbol) [0x7ff743684337]
+      	(No symbol) [0x7ff742e46bf1]
+      	(No symbol) [0x7ff742e2c109]
+      	(No symbol) [0x7ff742e2d433]
+      	(No symbol) [0x7ff743547041]
+      	(No symbol) [0x7ff743565c76]
+      	(No symbol) [0x7ff74355c340]
+      	(No symbol) [0x7ff7431dc9be]
+      	(No symbol) [0x7ff742fb2fa5]
+      	(No symbol) [0x7ff742fae2d4]
+      	(No symbol) [0x7ff742fae464]
+      	(No symbol) [0x7ff742f9731c]
+      	(No symbol) [0x7ffe8c20dda7]
+      	(No symbol) [0x7ffe8e1bee4c]
+
+    Cuando abro mi lista de reservaciones                                                           # None
+    Entonces en mi lista aparece la reservación de "Sala A" de 10:00 a 11:00 con estado "CANCELADA" # None
+    Y en mi lista aparece la fecha y hora en que la cancelé                                         # None
+
+[15/Nov/2026 20:31:34,206] - Broken pipe from ('127.0.0.1', 59205)
+[15/Nov/2026 20:31:34,207] - Broken pipe from ('127.0.0.1', 64092)
+[15/Nov/2026 20:31:34,208] - Broken pipe from ('127.0.0.1', 53342)
+[15/Nov/2026 20:31:34,208] - Broken pipe from ('127.0.0.1', 62580)
+[15/Nov/2026 20:31:34,208] - Broken pipe from ('127.0.0.1', 51966)
+[15/Nov/2026 20:31:34,208] - Broken pipe from ('127.0.0.1', 61703)
+[15/Nov/2026 20:31:34,208] - Broken pipe from ('127.0.0.1', 56800)
+[15/Nov/2026 20:31:34,208] - Broken pipe from ('127.0.0.1', 62890)
+[15/Nov/2026 20:31:34,209] - Broken pipe from ('127.0.0.1', 55776)
+[15/Nov/2026 20:31:34,209] - Broken pipe from ('127.0.0.1', 64252)
+[15/Nov/2026 20:31:34,209] - Broken pipe from ('127.0.0.1', 57979)
+[15/Nov/2026 20:31:34,209] - Broken pipe from ('127.0.0.1', 57655)
+Destroying test database for alias 'default'...
+
+Errored scenarios:
+  features/cancelaciones.feature:10  CA-07 Cancelar una reservación vigente con anticipación suficiente
+  features/cancelaciones.feature:19  CA-08 Impedir que un usuario cancele una reservación ajena
+  features/cancelaciones.feature:38  CA-09 Impedir la cancelación fuera del periodo permitido -- @1.1 
+  features/cancelaciones.feature:39  CA-09 Impedir la cancelación fuera del periodo permitido -- @1.2 
+  features/cancelaciones.feature:41  CA-10 Impedir cancelar nuevamente una reservación cancelada
+  features/cancelaciones.feature:50  CA-11 Mantener la trazabilidad de la cancelación
+
+0 features passed, 0 failed, 1 error, 0 skipped
+0 scenarios passed, 0 failed, 6 error, 0 skipped
+25 steps passed, 0 failed, 6 error, 19 skipped
+Took 0min 12.465s
