@@ -12,4 +12,5 @@ show_missing = True
 skip_covered = False
 
 [html]
-directory = reportes/cobertura
+directory = ../reportes/cobertura
+title = Cobertura - Reservación de salas
