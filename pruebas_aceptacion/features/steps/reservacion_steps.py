@@ -1,25 +1,14 @@
 import threading
-from datetime import datetime, timedelta
 
 from behave import given, when, then
 from django.contrib.auth.models import User
-from django.utils import timezone
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 
 from navegacion import esperar_nueva_pagina
+from utilidades import fecha_de, hora, textos_de_mensajes
 from reservaciones.models import Reservacion
 from salas.models import Sala
-
-DIAS = {'ayer': -1, 'hoy': 0, 'mañana': 1}
-
-
-def fecha_de(dia):
-    return timezone.localdate() + timedelta(days=DIAS[dia])
-
-
-def hora(texto):
-    return datetime.strptime(texto, '%H:%M').time()
 
 
 def guardar_sala(nombre, capacidad, activa, ubicacion='Biblioteca'):
@@ -58,11 +47,6 @@ def enviar(navegador):
     boton = navegador.find_element(By.ID, 'boton-guardar')
     boton.click()
     esperar_nueva_pagina(navegador, boton)
-
-
-def textos_de_mensajes(navegador):
-    mensajes = navegador.find_elements(By.CLASS_NAME, 'mensaje')
-    return [mensaje.text for mensaje in mensajes]
 
 
 def vigentes_en(sala, dia, inicio, fin):
