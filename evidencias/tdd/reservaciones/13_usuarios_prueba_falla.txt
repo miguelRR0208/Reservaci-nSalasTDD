@@ -1,0 +1,131 @@
+Creating test database for alias 'default'...
+Destroying old test database for alias 'default'...
+EEEEEE
+======================================================================
+ERROR: test_admin_es_superusuario (reservaciones.tests.tests_comandos.TestComandoUsuariosDePrueba.test_admin_es_superusuario)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\core\management\__init__.py", line 110, in call_command
+    app_name = get_commands()[command_name]
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'crear_usuarios_prueba'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_comandos.py", line 27, in test_admin_es_superusuario
+    self.ejecutar()
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_comandos.py", line 13, in ejecutar
+    call_command('crear_usuarios_prueba', stdout=salida)
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\core\management\__init__.py", line 112, in call_command
+    raise CommandError("Unknown command: %r" % command_name)
+django.core.management.base.CommandError: Unknown command: 'crear_usuarios_prueba'
+
+======================================================================
+ERROR: test_crea_usuarios_que_pueden_iniciar_sesion (reservaciones.tests.tests_comandos.TestComandoUsuariosDePrueba.test_crea_usuarios_que_pueden_iniciar_sesion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\core\management\__init__.py", line 110, in call_command
+    app_name = get_commands()[command_name]
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'crear_usuarios_prueba'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_comandos.py", line 17, in test_crea_usuarios_que_pueden_iniciar_sesion
+    self.ejecutar()
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_comandos.py", line 13, in ejecutar
+    call_command('crear_usuarios_prueba', stdout=salida)
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\core\management\__init__.py", line 112, in call_command
+    raise CommandError("Unknown command: %r" % command_name)
+django.core.management.base.CommandError: Unknown command: 'crear_usuarios_prueba'
+
+======================================================================
+ERROR: test_ejecutarlo_dos_veces_no_duplica_usuarios (reservaciones.tests.tests_comandos.TestComandoUsuariosDePrueba.test_ejecutarlo_dos_veces_no_duplica_usuarios)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\core\management\__init__.py", line 110, in call_command
+    app_name = get_commands()[command_name]
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'crear_usuarios_prueba'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_comandos.py", line 39, in test_ejecutarlo_dos_veces_no_duplica_usuarios
+    self.ejecutar()
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_comandos.py", line 13, in ejecutar
+    call_command('crear_usuarios_prueba', stdout=salida)
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\core\management\__init__.py", line 112, in call_command
+    raise CommandError("Unknown command: %r" % command_name)
+django.core.management.base.CommandError: Unknown command: 'crear_usuarios_prueba'
+
+======================================================================
+ERROR: test_informa_los_usuarios_listos (reservaciones.tests.tests_comandos.TestComandoUsuariosDePrueba.test_informa_los_usuarios_listos)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\core\management\__init__.py", line 110, in call_command
+    app_name = get_commands()[command_name]
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'crear_usuarios_prueba'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_comandos.py", line 58, in test_informa_los_usuarios_listos
+    salida = self.ejecutar()
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_comandos.py", line 13, in ejecutar
+    call_command('crear_usuarios_prueba', stdout=salida)
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\core\management\__init__.py", line 112, in call_command
+    raise CommandError("Unknown command: %r" % command_name)
+django.core.management.base.CommandError: Unknown command: 'crear_usuarios_prueba'
+
+======================================================================
+ERROR: test_restablece_la_contrasena_si_fue_cambiada (reservaciones.tests.tests_comandos.TestComandoUsuariosDePrueba.test_restablece_la_contrasena_si_fue_cambiada)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\core\management\__init__.py", line 110, in call_command
+    app_name = get_commands()[command_name]
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'crear_usuarios_prueba'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_comandos.py", line 48, in test_restablece_la_contrasena_si_fue_cambiada
+    self.ejecutar()
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_comandos.py", line 13, in ejecutar
+    call_command('crear_usuarios_prueba', stdout=salida)
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\core\management\__init__.py", line 112, in call_command
+    raise CommandError("Unknown command: %r" % command_name)
+django.core.management.base.CommandError: Unknown command: 'crear_usuarios_prueba'
+
+======================================================================
+ERROR: test_usuarios_normales_no_son_administradores (reservaciones.tests.tests_comandos.TestComandoUsuariosDePrueba.test_usuarios_normales_no_son_administradores)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\core\management\__init__.py", line 110, in call_command
+    app_name = get_commands()[command_name]
+               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'crear_usuarios_prueba'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_comandos.py", line 33, in test_usuarios_normales_no_son_administradores
+    self.ejecutar()
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_comandos.py", line 13, in ejecutar
+    call_command('crear_usuarios_prueba', stdout=salida)
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\core\management\__init__.py", line 112, in call_command
+    raise CommandError("Unknown command: %r" % command_name)
+django.core.management.base.CommandError: Unknown command: 'crear_usuarios_prueba'
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.015s
+
+FAILED (errors=6)
+Destroying test database for alias 'default'...
+Found 6 test(s).
+System check identified no issues (0 silenced).
