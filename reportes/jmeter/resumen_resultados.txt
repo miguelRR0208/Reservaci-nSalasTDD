@@ -1,0 +1,37 @@
+$ jmeter -n -t rendimiento/plan_reservaciones.jmx -Jpuerto=8010 -l reportes/jmeter/resultados.csv -e -o reportes/jmeter/html
+
+Creating summariser <summary>
+Created the tree successfully using rendimiento/plan_reservaciones.jmx
+Starting standalone test @ 2026 Nov 16 14:10:01 CST (1794859801282)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +      1 in 00:00:00 =    8.3/s Avg:    22 Min:    22 Max:    22 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+summary +    225 in 00:00:28 =    7.9/s Avg:    63 Min:     2 Max:   919 Err:     0 (0.00%) Active: 1 Started: 29 Finished: 28
+summary =    226 in 00:00:28 =    7.9/s Avg:    63 Min:     2 Max:   919 Err:     0 (0.00%)
+summary +    435 in 00:00:30 =   14.5/s Avg:    71 Min:     2 Max:   980 Err:     0 (0.00%) Active: 2 Started: 81 Finished: 79
+summary =    661 in 00:00:59 =   11.3/s Avg:    68 Min:     2 Max:   980 Err:     0 (0.00%)
+summary +     39 in 00:00:03 =   13.2/s Avg:    93 Min:     3 Max:   728 Err:     0 (0.00%) Active: 0 Started: 85 Finished: 85
+summary =    700 in 00:01:02 =   11.4/s Avg:    70 Min:     2 Max:   980 Err:     0 (0.00%)
+Tidying up ...    @ 2026 Nov 16 14:11:03 CST (1794859863044)
+... end of run
+
+$ python rendimiento/resumir_resultados.py
+
+Tiempos en ms, throughput en peticiones por segundo
+
+Petición                               Muestras  Promedio      p90      p95   Máximo  Throughput   % Error
+PERF-01 Abrir inicio de sesión               50       5.2      8.0      9.0        9        1.70      0.00
+PERF-01 Consultar mis reservaciones         250      10.4     11.0     13.9       21        8.41      0.00
+PERF-01 Iniciar sesión                       50     493.0    718.0    787.6      823        1.66      0.00
+PERF-02 Abrir formulario                     90       5.5      6.0      7.0        9        3.16      0.00
+PERF-02 Abrir inicio de sesión               30       5.3      8.9     14.8       22        1.04      0.00
+PERF-02 Iniciar sesión                       30     441.2    441.7    662.7      919        1.02      0.00
+PERF-02 Registrar reservación                90      10.5     11.0     12.0       30        3.16      0.00
+PERF-03 Abrir formulario                     50       8.5     17.0     20.4       30       47.21      0.00
+PERF-03 Abrir inicio de sesión                5       8.0     12.0     12.0       12      384.62      0.00
+PERF-03 Iniciar sesión                        5     831.0    980.0    980.0      980        5.08      0.00
+PERF-03 Reservar el mismo horario            50      44.3     71.6     82.9       92       60.61      0.00
+Total                                       700      70.3    417.0    429.0      980       11.40      0.00
+
+PERF-01: errores 0.00% (< 1.0%), p95 de "PERF-01 Consultar mis reservaciones" 13.9 ms (<= 1500 ms) -> CUMPLE
+PERF-02: errores 0.00% (< 1.0%), p95 de "PERF-02 Registrar reservación" 12.0 ms (<= 2000 ms) -> CUMPLE
+PERF-03: errores 0.00% (el resultado en la base se revisa con revisar_traslapes.py)
