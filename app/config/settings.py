@@ -60,6 +60,13 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
         'TEST': {'NAME': BASE_DIR / 'test_db.sqlite3'},
+        # Cada transacción pide el turno para escribir desde el inicio,
+        # así dos reservaciones simultáneas se atienden una tras otra.
+        # Si la base está ocupada se espera hasta 20 segundos.
+        'OPTIONS': {
+            'transaction_mode': 'IMMEDIATE',
+            'timeout': 20,
+        },
     }
 }
 
