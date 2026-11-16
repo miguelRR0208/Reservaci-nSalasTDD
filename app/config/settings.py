@@ -1,6 +1,7 @@
 """Configuración del proyecto de reservación de salas."""
 
 import os
+import sys
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -89,6 +90,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Al correr pruebas se usa un cifrado de contraseñas rápido;
+# el normal es lento a propósito y haría muy tardadas las pruebas.
+if {'test', 'behave'} & set(sys.argv):
+    PASSWORD_HASHERS = ['django.contrib.auth.hashers.MD5PasswordHasher']
+
 LANGUAGE_CODE = 'es-mx'
 
 TIME_ZONE = 'America/Mexico_City'
@@ -98,5 +104,9 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = 'static/'
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'reservaciones:lista'
+LOGOUT_REDIRECT_URL = 'login'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
