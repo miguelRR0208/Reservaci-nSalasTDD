@@ -7,6 +7,7 @@ from django.utils import timezone
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 
+from navegacion import esperar_nueva_pagina
 from reservaciones.models import Reservacion
 from salas.models import Sala
 
@@ -51,6 +52,12 @@ def capturar_horario(context, navegador, dia, inicio, fin):
 def abrir_formulario(context, navegador):
     navegador.get(context.get_url('reservaciones:lista'))
     navegador.find_element(By.ID, 'nueva-reservacion').click()
+
+
+def enviar(navegador):
+    boton = navegador.find_element(By.ID, 'boton-guardar')
+    boton.click()
+    esperar_nueva_pagina(navegador, boton)
 
 
 def textos_de_mensajes(navegador):
@@ -145,7 +152,7 @@ def capturo_asistentes_y_proposito(context, asistentes, proposito):
 
 @when(u'envío el formulario')
 def envio_formulario(context):
-    context.navegador.find_element(By.ID, 'boton-guardar').click()
+    enviar(context.navegador)
 
 
 @then(u'mi reservación queda registrada con estado "{estado}"')
@@ -222,15 +229,17 @@ def envian_al_mismo_tiempo(context):
         for navegador in context.navegadores
     ]
 
-    def enviar(boton):
+    def dar_clic(boton):
         barrera.wait()
         boton.click()
 
-    hilos = [threading.Thread(target=enviar, args=(b,)) for b in botones]
+    hilos = [threading.Thread(target=dar_clic, args=(b,)) for b in botones]
     for hilo in hilos:
         hilo.start()
     for hilo in hilos:
         hilo.join()
+    for navegador, boton in zip(context.navegadores, botones):
+        esperar_nueva_pagina(navegador, boton)
     context.mensajes_por_navegador = [
         textos_de_mensajes(navegador) for navegador in context.navegadores
     ]

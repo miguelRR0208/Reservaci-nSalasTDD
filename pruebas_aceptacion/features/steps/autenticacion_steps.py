@@ -2,6 +2,8 @@ from behave import given
 from django.contrib.auth.models import User
 from selenium.webdriver.common.by import By
 
+from navegacion import esperar_nueva_pagina
+
 
 def iniciar_sesion(context, navegador, usuario, clave):
     if not User.objects.filter(username=usuario).exists():
@@ -9,7 +11,9 @@ def iniciar_sesion(context, navegador, usuario, clave):
     navegador.get(context.get_url('login'))
     navegador.find_element(By.NAME, 'username').send_keys(usuario)
     navegador.find_element(By.NAME, 'password').send_keys(clave)
-    navegador.find_element(By.ID, 'boton-entrar').click()
+    boton = navegador.find_element(By.ID, 'boton-entrar')
+    boton.click()
+    esperar_nueva_pagina(navegador, boton)
 
 
 @given(u'el usuario "{usuario}" con contraseña "{clave}" ha iniciado sesión')
