@@ -1,0 +1,201 @@
+$ cd pruebas_aceptacion && python ../app/manage.py behave
+
+Creating test database for alias 'default'...
+Destroying old test database for alias 'default'...
+USING RUNNER: behave.runner:Runner
+Característica: Cancelar una reservación # features/cancelaciones.feature:1
+  Como usuario autenticado propietario de una reservación
+  Quiero cancelar una reservación que ya no utilizaré
+  Para liberar la sala y permitir que otro usuario pueda reservarla
+  Característica: Cancelar una reservación  # features/cancelaciones.feature:1
+
+  Escenario: CA-07 Cancelar una reservación vigente con anticipación suficiente                 # features/cancelaciones.feature:10
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:19
+    Dado que tengo una reservación vigente de la sala "Sala A" mañana de 10:00 a 11:00          # features/steps/cancelacion_steps.py:48
+    Cuando elijo cancelar la reservación desde mi lista                                         # features/steps/cancelacion_steps.py:81
+    Y confirmo la cancelación                                                                   # features/steps/cancelacion_steps.py:86
+    Entonces mi reservación tiene el estado "CANCELADA"                                         # features/steps/cancelacion_steps.py:119
+    Y mi reservación tiene registrada la fecha y hora de cancelación                            # features/steps/cancelacion_steps.py:134
+    Y veo el mensaje "La reservación se canceló correctamente."                                 # features/steps/reservacion_steps.py:151
+    Y la sala "Sala A" queda disponible mañana de 10:00 a 11:00                                 # features/steps/cancelacion_steps.py:149
+
+  Escenario: CA-08 Impedir que un usuario cancele una reservación ajena                                   # features/cancelaciones.feature:19
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas           # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                                    # features/steps/autenticacion_steps.py:19
+    Dado que existe una reservación vigente de otro usuario para la sala "Sala A" mañana de 12:00 a 13:00 # features/steps/reservacion_steps.py:81
+    Y que tengo una reservación vigente de la sala "Sala A" mañana de 10:00 a 11:00                       # features/steps/cancelacion_steps.py:48
+    Cuando intento cancelar la reservación del otro usuario modificando la petición                       # features/steps/cancelacion_steps.py:102
+    Entonces veo el mensaje "No se encontró la página solicitada."                                        # features/steps/reservacion_steps.py:151
+    Y la reservación del otro usuario conserva el estado "VIGENTE"                                        # features/steps/cancelacion_steps.py:126
+    Y mi reservación tiene el estado "VIGENTE"                                                            # features/steps/cancelacion_steps.py:119
+    Y la respuesta no muestra datos de la reservación del otro usuario                                    # features/steps/cancelacion_steps.py:156
+
+  Esquema del escenario: CA-09 Impedir la cancelación fuera del periodo permitido -- @1.1       # features/cancelaciones.feature:38
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:19
+    Dado que tengo una reservación vigente de la sala "Sala A" que inicia dentro de 60 minutos  # features/steps/cancelacion_steps.py:54
+    Cuando abro mi lista de reservaciones                                                       # features/steps/cancelacion_steps.py:91
+    Entonces no aparece la opción para cancelar mi reservación                                  # features/steps/cancelacion_steps.py:164
+    Cuando intento cancelarla abriendo directamente su confirmación                             # features/steps/cancelacion_steps.py:96
+    Entonces mi reservación tiene el estado "VIGENTE"                                           # features/steps/cancelacion_steps.py:119
+    Y veo el mensaje "El periodo de cancelación ha concluido."                                  # features/steps/reservacion_steps.py:151
+
+  Esquema del escenario: CA-09 Impedir la cancelación fuera del periodo permitido -- @1.2       # features/cancelaciones.feature:39
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:19
+    Dado que tengo una reservación vigente de la sala "Sala A" que inicia dentro de 30 minutos  # features/steps/cancelacion_steps.py:54
+    Cuando abro mi lista de reservaciones                                                       # features/steps/cancelacion_steps.py:91
+    Entonces no aparece la opción para cancelar mi reservación                                  # features/steps/cancelacion_steps.py:164
+    Cuando intento cancelarla abriendo directamente su confirmación                             # features/steps/cancelacion_steps.py:96
+    Entonces mi reservación tiene el estado "VIGENTE"                                           # features/steps/cancelacion_steps.py:119
+    Y veo el mensaje "El periodo de cancelación ha concluido."                                  # features/steps/reservacion_steps.py:151
+
+  Escenario: CA-10 Impedir cancelar nuevamente una reservación cancelada                        # features/cancelaciones.feature:41
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:19
+    Dado que tengo una reservación cancelada de la sala "Sala A" mañana de 10:00 a 11:00        # features/steps/cancelacion_steps.py:64
+    Cuando abro mi lista de reservaciones                                                       # features/steps/cancelacion_steps.py:91
+    Entonces no aparece la opción para cancelar mi reservación                                  # features/steps/cancelacion_steps.py:164
+    Cuando intento cancelarla abriendo directamente su confirmación                             # features/steps/cancelacion_steps.py:96
+    Entonces mi reservación tiene el estado "CANCELADA"                                         # features/steps/cancelacion_steps.py:119
+    Y la fecha de cancelación de mi reservación no cambia                                       # features/steps/cancelacion_steps.py:141
+    Y veo el mensaje "La reservación ya fue cancelada."                                         # features/steps/reservacion_steps.py:151
+
+  Escenario: CA-11 Mantener la trazabilidad de la cancelación                                       # features/cancelaciones.feature:50
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas     # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                              # features/steps/autenticacion_steps.py:19
+    Dado que tengo una reservación vigente de la sala "Sala A" mañana de 10:00 a 11:00              # features/steps/cancelacion_steps.py:48
+    Y que cancelé esa reservación desde mi lista                                                    # features/steps/cancelacion_steps.py:75
+    Cuando abro mi lista de reservaciones                                                           # features/steps/cancelacion_steps.py:91
+    Entonces en mi lista aparece la reservación de "Sala A" de 10:00 a 11:00 con estado "CANCELADA" # features/steps/reservacion_steps.py:158
+    Y en mi lista aparece la fecha y hora en que la cancelé                                         # features/steps/cancelacion_steps.py:176
+
+Característica: Registrar una reservación de sala # features/reservaciones.feature:1
+  Como usuario autenticado
+  Quiero seleccionar una sala disponible y registrar una reservación
+  Para asegurar el uso exclusivo de la sala durante un periodo determinado
+  Característica: Registrar una reservación de sala  # features/reservaciones.feature:1
+
+  Escenario: CA-01 Registrar una reservación válida                                             # features/reservaciones.feature:10
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:19
+    Dado que no existe otra reservación vigente para la sala "Sala A" mañana de 10:00 a 11:00   # features/steps/reservacion_steps.py:74
+    Cuando abro el formulario de nueva reservación                                              # features/steps/reservacion_steps.py:96
+    Y capturo la sala "Sala A" para mañana de 10:00 a 11:00                                     # features/steps/reservacion_steps.py:103
+    Y capturo 3 asistentes con el propósito "Repaso para el examen de cálculo"                  # features/steps/reservacion_steps.py:128
+    Y envío el formulario                                                                       # features/steps/reservacion_steps.py:137
+    Entonces mi reservación queda registrada con estado "VIGENTE"                               # features/steps/reservacion_steps.py:142
+    Y veo el mensaje "La reservación se registró correctamente."                                # features/steps/reservacion_steps.py:151
+    Y en mi lista aparece la reservación de "Sala A" de 10:00 a 11:00 con estado "VIGENTE"      # features/steps/reservacion_steps.py:158
+
+  Escenario: CA-02 Rechazar una reservación con horario traslapado                                        # features/reservaciones.feature:20
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas           # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                                    # features/steps/autenticacion_steps.py:19
+    Dado que existe una reservación vigente de otro usuario para la sala "Sala A" mañana de 10:00 a 11:00 # features/steps/reservacion_steps.py:81
+    Cuando abro el formulario de nueva reservación                                                        # features/steps/reservacion_steps.py:96
+    Y capturo la sala "Sala A" para mañana de 10:30 a 11:30                                               # features/steps/reservacion_steps.py:103
+    Y capturo 2 asistentes con el propósito "Reunión del equipo de proyecto"                              # features/steps/reservacion_steps.py:128
+    Y envío el formulario                                                                                 # features/steps/reservacion_steps.py:137
+    Entonces no se registra ninguna reservación nueva                                                     # features/steps/reservacion_steps.py:169
+    Y veo el mensaje "La sala no está disponible en el horario solicitado."                               # features/steps/reservacion_steps.py:151
+
+  Escenario: CA-03 Rechazar una reservación que exceda la capacidad                             # features/reservaciones.feature:29
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:19
+    Cuando abro el formulario de nueva reservación                                              # features/steps/reservacion_steps.py:96
+    Y capturo la sala "Sala A" para mañana de 10:00 a 11:00                                     # features/steps/reservacion_steps.py:103
+    Y capturo 5 asistentes con el propósito "Sesión de estudio en grupo grande"                 # features/steps/reservacion_steps.py:128
+    Y envío el formulario                                                                       # features/steps/reservacion_steps.py:137
+    Entonces no se registra ninguna reservación nueva                                           # features/steps/reservacion_steps.py:169
+    Y veo el mensaje "El número de asistentes supera la capacidad de la sala."                  # features/steps/reservacion_steps.py:151
+    Y el formulario conserva los datos que capturé                                              # features/steps/reservacion_steps.py:176
+
+  Esquema del escenario: CA-04 Rechazar una fecha u horario inválidos -- @1.1                   # features/reservaciones.feature:48
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:19
+    Cuando abro el formulario de nueva reservación                                              # features/steps/reservacion_steps.py:96
+    Y capturo la sala "Sala A" para ayer de 10:00 a 11:00                                       # features/steps/reservacion_steps.py:103
+    Y capturo 2 asistentes con el propósito "Sesión de estudio de algoritmos"                   # features/steps/reservacion_steps.py:128
+    Y envío el formulario                                                                       # features/steps/reservacion_steps.py:137
+    Entonces no se registra ninguna reservación nueva                                           # features/steps/reservacion_steps.py:169
+    Y veo el mensaje "La fecha no puede ser anterior al día de hoy."                            # features/steps/reservacion_steps.py:151
+
+  Esquema del escenario: CA-04 Rechazar una fecha u horario inválidos -- @1.2                   # features/reservaciones.feature:49
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:19
+    Cuando abro el formulario de nueva reservación                                              # features/steps/reservacion_steps.py:96
+    Y capturo la sala "Sala A" para mañana de 11:00 a 10:00                                     # features/steps/reservacion_steps.py:103
+    Y capturo 2 asistentes con el propósito "Sesión de estudio de algoritmos"                   # features/steps/reservacion_steps.py:128
+    Y envío el formulario                                                                       # features/steps/reservacion_steps.py:137
+    Entonces no se registra ninguna reservación nueva                                           # features/steps/reservacion_steps.py:169
+    Y veo el mensaje "La hora de fin debe ser posterior a la hora de inicio."                   # features/steps/reservacion_steps.py:151
+
+  Esquema del escenario: CA-04 Rechazar una fecha u horario inválidos -- @1.3                   # features/reservaciones.feature:50
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:19
+    Cuando abro el formulario de nueva reservación                                              # features/steps/reservacion_steps.py:96
+    Y capturo la sala "Sala A" para mañana de 10:00 a 10:00                                     # features/steps/reservacion_steps.py:103
+    Y capturo 2 asistentes con el propósito "Sesión de estudio de algoritmos"                   # features/steps/reservacion_steps.py:128
+    Y envío el formulario                                                                       # features/steps/reservacion_steps.py:137
+    Entonces no se registra ninguna reservación nueva                                           # features/steps/reservacion_steps.py:169
+    Y veo el mensaje "La hora de fin debe ser posterior a la hora de inicio."                   # features/steps/reservacion_steps.py:151
+
+  Escenario: CA-05 Rechazar una sala inactiva                                                   # features/reservaciones.feature:52
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                          # features/steps/autenticacion_steps.py:19
+    Dado que existe la sala inactiva "Sala de mantenimiento" con capacidad para 6 personas      # features/steps/reservacion_steps.py:68
+    Cuando abro el formulario de nueva reservación                                              # features/steps/reservacion_steps.py:96
+    Entonces la sala "Sala de mantenimiento" no aparece entre las opciones                      # features/steps/reservacion_steps.py:185
+    Cuando fuerzo la selección de la sala "Sala de mantenimiento" para mañana de 10:00 a 11:00  # features/steps/reservacion_steps.py:113
+    Y capturo 2 asistentes con el propósito "Revisión del proyecto final"                       # features/steps/reservacion_steps.py:128
+    Y envío el formulario                                                                       # features/steps/reservacion_steps.py:137
+    Entonces no se registra ninguna reservación nueva                                           # features/steps/reservacion_steps.py:169
+    Y veo el mensaje "La sala no se encuentra disponible para reservación."                     # features/steps/reservacion_steps.py:151
+
+  Escenario: CA-06 Evitar una doble reservación ante solicitudes concurrentes                        # features/reservaciones.feature:62
+    Dado que existe la sala "Sala A" en "Biblioteca, planta baja" con capacidad para 4 personas      # features/steps/reservacion_steps.py:62
+    Y el usuario "ana" con contraseña "Reserva2026" ha iniciado sesión                               # features/steps/autenticacion_steps.py:19
+    Dado que no existe otra reservación vigente para la sala "Sala A" mañana de 12:00 a 13:00        # features/steps/reservacion_steps.py:74
+    Y el usuario "beto" con contraseña "Reserva2026" ha iniciado sesión en otro navegador            # features/steps/autenticacion_steps.py:25
+    Y en ambos navegadores se captura la sala "Sala A" para mañana de 12:00 a 13:00 con 2 asistentes # features/steps/reservacion_steps.py:192
+    Cuando ambos navegadores envían el formulario al mismo tiempo                                    # features/steps/reservacion_steps.py:207
+    Entonces solo una reservación queda vigente para la sala "Sala A" mañana de 12:00 a 13:00        # features/steps/reservacion_steps.py:232
+    Y un navegador muestra el mensaje "La reservación se registró correctamente."                    # features/steps/reservacion_steps.py:239
+    Y el otro navegador muestra el mensaje "La sala no está disponible en el horario solicitado."    # features/steps/reservacion_steps.py:250
+[16/Nov/2026 11:47:08,955] - Broken pipe from ('127.0.0.1', 54492)
+[16/Nov/2026 11:47:08,955] - Broken pipe from ('127.0.0.1', 55913)
+
+[16/Nov/2026 11:47:11,190] - Broken pipe from ('127.0.0.1', 56819)
+[16/Nov/2026 11:47:11,190] - Broken pipe from ('127.0.0.1', 55142)
+[16/Nov/2026 11:47:11,190] - Broken pipe from ('127.0.0.1', 54139)
+[16/Nov/2026 11:47:11,191] - Broken pipe from ('127.0.0.1', 50677)
+[16/Nov/2026 11:47:11,191] - Broken pipe from ('127.0.0.1', 55864)
+[16/Nov/2026 11:47:11,191] - Broken pipe from ('127.0.0.1', 58879)
+[16/Nov/2026 11:47:11,191] - Broken pipe from ('127.0.0.1', 51261)
+[16/Nov/2026 11:47:11,191] - Broken pipe from ('127.0.0.1', 52111)
+[16/Nov/2026 11:47:11,191] - Broken pipe from ('127.0.0.1', 57746)
+[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 63844)
+[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 58702)
+[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 57749)
+[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 54293)
+[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 51374)
+[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 62822)
+[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 60607)
+[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 53627)
+[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 53726)
+[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 59639)
+[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 62085)
+[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 54598)
+[16/Nov/2026 11:47:11,193] - Broken pipe from ('127.0.0.1', 52429)
+[16/Nov/2026 11:47:11,193] - Broken pipe from ('127.0.0.1', 59542)
+[16/Nov/2026 11:47:11,193] - Broken pipe from ('127.0.0.1', 62716)
+[16/Nov/2026 11:47:11,193] - Broken pipe from ('127.0.0.1', 56589)
+[16/Nov/2026 11:47:11,193] - Broken pipe from ('127.0.0.1', 64823)
+[16/Nov/2026 11:47:11,193] - Broken pipe from ('127.0.0.1', 57759)
+[16/Nov/2026 11:47:11,193] - Broken pipe from ('127.0.0.1', 51401)
+Destroying test database for alias 'default'...
+2 features passed, 0 failed, 0 skipped
+14 scenarios passed, 0 failed, 0 skipped
+121 steps passed, 0 failed, 0 skipped
+Took 0min 19.573s
