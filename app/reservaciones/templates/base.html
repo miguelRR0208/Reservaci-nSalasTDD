@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titulo %}Reservación de salas{% endblock %}</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <header>
+        <p id="bienvenida">Bienvenido {{ user.username }}</p>
+        <nav>
+            <a href="{% url 'reservaciones:lista' %}" id="mis-reservaciones">Mis reservaciones</a>
+            <a href="{% url 'reservaciones:nueva' %}" id="nueva-reservacion">Nueva reservación</a>
+        </nav>
+        <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit" id="boton-salir">Cerrar sesión</button>
+        </form>
+    </header>
+    {% endif %}
+
+    {% if messages %}
+    <ul id="mensajes">
+        {% for mensaje in messages %}
+        <li class="mensaje">{{ mensaje }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <main>
+        {% block contenido %}{% endblock %}
+    </main>
+</body>
+</html>

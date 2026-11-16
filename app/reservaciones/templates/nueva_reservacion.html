@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Nueva reservación{% endblock %}
+
+{% block contenido %}
+<h1>Nueva reservación</h1>
+
+{% if formulario.non_field_errors %}
+<ul id="errores">
+    {% for error in formulario.non_field_errors %}
+    <li class="mensaje">{{ error }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<form method="post" id="formulario-reservacion">
+    {% csrf_token %}
+    {% for campo in formulario %}
+    <p>
+        <label for="{{ campo.id_for_label }}">{{ campo.label }}</label>
+        {{ campo }}
+    </p>
+    {% if campo.errors %}
+    <ul class="errores-campo">
+        {% for error in campo.errors %}
+        <li class="mensaje">{{ error }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endfor %}
+    <button type="submit" id="boton-guardar">Guardar</button>
+</form>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Mis reservaciones{% endblock %}
+
+{% block contenido %}
+<h1>Mis reservaciones</h1>
+
+{% if reservaciones %}
+<table id="tabla-reservaciones">
+    <thead>
+        <tr>
+            <th>Sala</th>
+            <th>Fecha</th>
+            <th>Horario</th>
+            <th>Asistentes</th>
+            <th>Propósito</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for reservacion in reservaciones %}
+        <tr id="reservacion-{{ reservacion.pk }}">
+            <td>{{ reservacion.sala.nombre }}</td>
+            <td>{{ reservacion.fecha|date:"Y-m-d" }}</td>
+            <td>{{ reservacion.hora_inicio|time:"H:i" }} - {{ reservacion.hora_fin|time:"H:i" }}</td>
+            <td>{{ reservacion.asistentes }}</td>
+            <td>{{ reservacion.proposito }}</td>
+            <td class="estado">{{ reservacion.estado }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p id="sin-reservaciones">Todavía no tienes reservaciones.</p>
+{% endif %}
+{% endblock %}
