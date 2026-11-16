@@ -1,0 +1,23 @@
+$ coverage report -m
+
+Name                                                         Stmts   Miss Branch BrPart  Cover   Missing
+--------------------------------------------------------------------------------------------------------
+reservaciones\__init__.py                                        0      0      0      0   100%
+reservaciones\admin.py                                           6      0      0      0   100%
+reservaciones\apps.py                                            4      0      0      0   100%
+reservaciones\disponibilidad.py                                  5      0      0      0   100%
+reservaciones\forms.py                                          33      0      4      0   100%
+reservaciones\management\__init__.py                             0      0      0      0   100%
+reservaciones\management\commands\__init__.py                    0      0      0      0   100%
+reservaciones\management\commands\crear_usuarios_prueba.py      13      0      2      0   100%
+reservaciones\models.py                                         25      0      0      0   100%
+reservaciones\reglas.py                                         51      0     20      0   100%
+reservaciones\servicios.py                                      32      0      2      0   100%
+reservaciones\urls.py                                            4      0      0      0   100%
+reservaciones\views.py                                          38      0      8      0   100%
+salas\__init__.py                                                0      0      0      0   100%
+salas\admin.py                                                   6      0      0      0   100%
+salas\apps.py                                                    4      0      0      0   100%
+salas\models.py                                                 15      0      0      0   100%
+--------------------------------------------------------------------------------------------------------
+TOTAL                                                          236      0     36      0   100%
