@@ -1,0 +1,203 @@
+Creating test database for alias 'default'...
+Destroying old test database for alias 'default'...
+EEEEEEEEEE.EF..............
+======================================================================
+ERROR: test_get_a_reservacion_ajena_responde_404 (reservaciones.tests.tests_views.TestVistaCancelarReservacion.test_get_a_reservacion_ajena_responde_404)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_views.py", line 217, in setUp
+    self.url = self.url_de(self.reservacion)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_views.py", line 220, in url_de
+    return reverse('reservaciones:cancelar', args=[reservacion.pk])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'cancelar' not found. 'cancelar' is not a valid view function or pattern name.
+
+======================================================================
+ERROR: test_get_anonimo_es_enviado_al_login (reservaciones.tests.tests_views.TestVistaCancelarReservacion.test_get_anonimo_es_enviado_al_login)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_views.py", line 217, in setUp
+    self.url = self.url_de(self.reservacion)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_views.py", line 220, in url_de
+    return reverse('reservaciones:cancelar', args=[reservacion.pk])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'cancelar' not found. 'cancelar' is not a valid view function or pattern name.
+
+======================================================================
+ERROR: test_get_muestra_la_confirmacion_sin_cancelar (reservaciones.tests.tests_views.TestVistaCancelarReservacion.test_get_muestra_la_confirmacion_sin_cancelar)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_views.py", line 217, in setUp
+    self.url = self.url_de(self.reservacion)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_views.py", line 220, in url_de
+    return reverse('reservaciones:cancelar', args=[reservacion.pk])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'cancelar' not found. 'cancelar' is not a valid view function or pattern name.
+
+======================================================================
+ERROR: test_post_a_reservacion_ajena_responde_404_sin_cambios (reservaciones.tests.tests_views.TestVistaCancelarReservacion.test_post_a_reservacion_ajena_responde_404_sin_cambios)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_views.py", line 217, in setUp
+    self.url = self.url_de(self.reservacion)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_views.py", line 220, in url_de
+    return reverse('reservaciones:cancelar', args=[reservacion.pk])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'cancelar' not found. 'cancelar' is not a valid view function or pattern name.
+
+======================================================================
+ERROR: test_post_a_reservacion_cancelada_muestra_mensaje (reservaciones.tests.tests_views.TestVistaCancelarReservacion.test_post_a_reservacion_cancelada_muestra_mensaje)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_views.py", line 217, in setUp
+    self.url = self.url_de(self.reservacion)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_views.py", line 220, in url_de
+    return reverse('reservaciones:cancelar', args=[reservacion.pk])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'cancelar' not found. 'cancelar' is not a valid view function or pattern name.
+
+======================================================================
+ERROR: test_post_anonimo_no_cancela (reservaciones.tests.tests_views.TestVistaCancelarReservacion.test_post_anonimo_no_cancela)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_views.py", line 217, in setUp
+    self.url = self.url_de(self.reservacion)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_views.py", line 220, in url_de
+    return reverse('reservaciones:cancelar', args=[reservacion.pk])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'cancelar' not found. 'cancelar' is not a valid view function or pattern name.
+
+======================================================================
+ERROR: test_post_cancela_y_redirige_con_mensaje (reservaciones.tests.tests_views.TestVistaCancelarReservacion.test_post_cancela_y_redirige_con_mensaje)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_views.py", line 217, in setUp
+    self.url = self.url_de(self.reservacion)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_views.py", line 220, in url_de
+    return reverse('reservaciones:cancelar', args=[reservacion.pk])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'cancelar' not found. 'cancelar' is not a valid view function or pattern name.
+
+======================================================================
+ERROR: test_post_fuera_de_periodo_muestra_mensaje (reservaciones.tests.tests_views.TestVistaCancelarReservacion.test_post_fuera_de_periodo_muestra_mensaje)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_views.py", line 217, in setUp
+    self.url = self.url_de(self.reservacion)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_views.py", line 220, in url_de
+    return reverse('reservaciones:cancelar', args=[reservacion.pk])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'cancelar' not found. 'cancelar' is not a valid view function or pattern name.
+
+======================================================================
+ERROR: test_post_sin_token_csrf_es_rechazado (reservaciones.tests.tests_views.TestVistaCancelarReservacion.test_post_sin_token_csrf_es_rechazado)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_views.py", line 217, in setUp
+    self.url = self.url_de(self.reservacion)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_views.py", line 220, in url_de
+    return reverse('reservaciones:cancelar', args=[reservacion.pk])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'cancelar' not found. 'cancelar' is not a valid view function or pattern name.
+
+======================================================================
+ERROR: test_reservacion_inexistente_responde_404 (reservaciones.tests.tests_views.TestVistaCancelarReservacion.test_reservacion_inexistente_responde_404)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_views.py", line 217, in setUp
+    self.url = self.url_de(self.reservacion)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_views.py", line 220, in url_de
+    return reverse('reservaciones:cancelar', args=[reservacion.pk])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'cancelar' not found. 'cancelar' is not a valid view function or pattern name.
+
+======================================================================
+ERROR: test_muestra_enlace_para_cancelar_cuando_se_puede (reservaciones.tests.tests_views.TestVistaListaReservaciones.test_muestra_enlace_para_cancelar_cuando_se_puede)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_views.py", line 171, in test_muestra_enlace_para_cancelar_cuando_se_puede
+    url = reverse('reservaciones:cancelar', args=[reservacion.pk])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\.venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'cancelar' not found. 'cancelar' is not a valid view function or pattern name.
+
+======================================================================
+FAIL: test_muestra_fecha_y_hora_de_cancelacion (reservaciones.tests.tests_views.TestVistaListaReservaciones.test_muestra_fecha_y_hora_de_cancelacion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\reservaciones\tests\tests_views.py", line 206, in test_muestra_fecha_y_hora_de_cancelacion
+    self.assertContains(
+AssertionError: False is not true : Couldn't find '<td class="fecha-cancelacion">2030-05-09 18:45</td>' in the following response
+b'<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Mis reservaciones</title>\n</head>\n<body>\n    \n    <header>\n        <p id="bienvenida">Bienvenido ana</p>\n        <nav>\n            <a href="/reservaciones/" id="mis-reservaciones">Mis reservaciones</a>\n            <a href="/reservaciones/nueva/" id="nueva-reservacion">Nueva reservaci\xc3\xb3n</a>\n        </nav>\n        <form method="post" action="/cuentas/logout/">\n            <input type="hidden" name="csrfmiddlewaretoken" value="yqmHQIM5aUT1fJTjDw5b2JMCSEc3tnTCjHQFxUeF8SoMM5XzJ4LgmJVBDvBtgHy2">\n            <button type="submit" id="boton-salir">Cerrar sesi\xc3\xb3n</button>\n        </form>\n    </header>\n    \n\n    \n\n    <main>\n        \n<h1>Mis reservaciones</h1>\n\n\n<table id="tabla-reservaciones">\n    <thead>\n        <tr>\n            <th>Sala</th>\n            <th>Fecha</th>\n            <th>Horario</th>\n            <th>Asistentes</th>\n            <th>Prop\xc3\xb3sito</th>\n            <th>Estado</th>\n        </tr>\n    </thead>\n    <tbody>\n        \n        <tr id="reservacion-1">\n            <td>Sala A</td>\n            <td>2026-11-16</td>\n            <td>10:00 - 11:00</td>\n            <td>2</td>\n            <td>Reservaci\xc3\xb3n ya registrada</td>\n            <td class="estado">CANCELADA</td>\n        </tr>\n        \n    </tbody>\n</table>\n\n\n    </main>\n</body>\n</html>\n'
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.204s
+
+FAILED (failures=1, errors=11)
+Destroying test database for alias 'default'...
+Found 27 test(s).
+System check identified no issues (0 silenced).
