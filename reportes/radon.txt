@@ -1,5 +1,10 @@
 $ radon cc . -s -a -e "*/migrations/*" -i ".venv"
 
+generar_reportes.py
+    F 63:0 elegir_pasos - A (4)
+    F 75:0 main - A (4)
+    F 47:0 ejecutar - A (3)
+    F 69:0 mostrar_resumen - A (3)
 app\manage.py
     F 7:0 main - A (2)
 app\reservaciones\admin.py
@@ -348,8 +353,9 @@ rendimiento\revisar_traslapes.py
     F 47:0 mostrar - A (3)
     F 57:0 main - A (3)
 
-315 blocks (classes, functions, methods) analyzed.
-Average complexity: A (1.3968253968253967)
+319 blocks (classes, functions, methods) analyzed.
+Average complexity: A (1.4231974921630095)
 
-$ radon cc . -s -n C -e "*/migrations/*" -i ".venv"
-(muestra solo bloques con complejidad 11 o más; la salida vacía indica que no hay ninguno)
+$ radon cc . -s -n C -e "*/migrations/*" -i ".venv"  (solo lo que pase de 10; vacío = ninguno)
+
+

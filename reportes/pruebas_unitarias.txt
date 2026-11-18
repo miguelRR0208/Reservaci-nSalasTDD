@@ -1,4 +1,4 @@
-$ coverage run manage.py test
+$ coverage run manage.py test -v 2
 
 Creating test database for alias 'default' ('C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\test_db.sqlite3')...
 Destroying old test database for alias 'default' ('C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\test_db.sqlite3')...
@@ -189,9 +189,10 @@ test_rechaza_reservacion_cancelada (reservaciones.tests.tests_reglas.TestReglasC
 test_se_puede_cancelar_si_esta_vigente_y_a_tiempo (reservaciones.tests.tests_reglas.TestReglasCancelacion.test_se_puede_cancelar_si_esta_vigente_y_a_tiempo) ... ok
 
 ----------------------------------------------------------------------
-Ran 157 tests in 2.201s
+Ran 157 tests in 2.475s
 
 OK
 Destroying test database for alias 'default' ('C:\Users\ultra\Documents\Ingenieria\SEMESTREACTUAL_NOVENO\TESTING\Reservaci-nSalasTDD\app\test_db.sqlite3')...
  OK
 System check identified no issues (0 silenced).
+

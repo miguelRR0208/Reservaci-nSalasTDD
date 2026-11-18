@@ -1,4 +1,4 @@
-$ cd pruebas_aceptacion && python ../app/manage.py behave
+$ python ../app/manage.py behave
 
 Creating test database for alias 'default'...
 Destroying old test database for alias 'default'...
@@ -163,39 +163,40 @@ Característica: Registrar una reservación de sala # features/reservaciones.fea
     Entonces solo una reservación queda vigente para la sala "Sala A" mañana de 12:00 a 13:00        # features/steps/reservacion_steps.py:232
     Y un navegador muestra el mensaje "La reservación se registró correctamente."                    # features/steps/reservacion_steps.py:239
     Y el otro navegador muestra el mensaje "La sala no está disponible en el horario solicitado."    # features/steps/reservacion_steps.py:250
-[16/Nov/2026 11:47:08,955] - Broken pipe from ('127.0.0.1', 54492)
-[16/Nov/2026 11:47:08,955] - Broken pipe from ('127.0.0.1', 55913)
+[16/Nov/2026 17:12:36,998] - Broken pipe from ('127.0.0.1', 50343)
+[16/Nov/2026 17:12:36,998] - Broken pipe from ('127.0.0.1', 53140)
 
-[16/Nov/2026 11:47:11,190] - Broken pipe from ('127.0.0.1', 56819)
-[16/Nov/2026 11:47:11,190] - Broken pipe from ('127.0.0.1', 55142)
-[16/Nov/2026 11:47:11,190] - Broken pipe from ('127.0.0.1', 54139)
-[16/Nov/2026 11:47:11,191] - Broken pipe from ('127.0.0.1', 50677)
-[16/Nov/2026 11:47:11,191] - Broken pipe from ('127.0.0.1', 55864)
-[16/Nov/2026 11:47:11,191] - Broken pipe from ('127.0.0.1', 58879)
-[16/Nov/2026 11:47:11,191] - Broken pipe from ('127.0.0.1', 51261)
-[16/Nov/2026 11:47:11,191] - Broken pipe from ('127.0.0.1', 52111)
-[16/Nov/2026 11:47:11,191] - Broken pipe from ('127.0.0.1', 57746)
-[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 63844)
-[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 58702)
-[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 57749)
-[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 54293)
-[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 51374)
-[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 62822)
-[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 60607)
-[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 53627)
-[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 53726)
-[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 59639)
-[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 62085)
-[16/Nov/2026 11:47:11,192] - Broken pipe from ('127.0.0.1', 54598)
-[16/Nov/2026 11:47:11,193] - Broken pipe from ('127.0.0.1', 52429)
-[16/Nov/2026 11:47:11,193] - Broken pipe from ('127.0.0.1', 59542)
-[16/Nov/2026 11:47:11,193] - Broken pipe from ('127.0.0.1', 62716)
-[16/Nov/2026 11:47:11,193] - Broken pipe from ('127.0.0.1', 56589)
-[16/Nov/2026 11:47:11,193] - Broken pipe from ('127.0.0.1', 64823)
-[16/Nov/2026 11:47:11,193] - Broken pipe from ('127.0.0.1', 57759)
-[16/Nov/2026 11:47:11,193] - Broken pipe from ('127.0.0.1', 51401)
+[16/Nov/2026 17:12:40,783] - Broken pipe from ('127.0.0.1', 53381)
+[16/Nov/2026 17:12:40,783] - Broken pipe from ('127.0.0.1', 60975)
+[16/Nov/2026 17:12:40,783] - Broken pipe from ('127.0.0.1', 51050)
+[16/Nov/2026 17:12:40,783] - Broken pipe from ('127.0.0.1', 52380)
+[16/Nov/2026 17:12:40,783] - Broken pipe from ('127.0.0.1', 65253)
+[16/Nov/2026 17:12:40,783] - Broken pipe from ('127.0.0.1', 62148)
+[16/Nov/2026 17:12:40,783] - Broken pipe from ('127.0.0.1', 58116)
+[16/Nov/2026 17:12:40,783] - Broken pipe from ('127.0.0.1', 50141)
+[16/Nov/2026 17:12:40,784] - Broken pipe from ('127.0.0.1', 59240)
+[16/Nov/2026 17:12:40,784] - Broken pipe from ('127.0.0.1', 51740)
+[16/Nov/2026 17:12:40,784] - Broken pipe from ('127.0.0.1', 58491)
+[16/Nov/2026 17:12:40,784] - Broken pipe from ('127.0.0.1', 62415)
+[16/Nov/2026 17:12:40,784] - Broken pipe from ('127.0.0.1', 55602)
+[16/Nov/2026 17:12:40,785] - Broken pipe from ('127.0.0.1', 57403)
+[16/Nov/2026 17:12:40,785] - Broken pipe from ('127.0.0.1', 53340)
+[16/Nov/2026 17:12:40,785] - Broken pipe from ('127.0.0.1', 58198)
+[16/Nov/2026 17:12:40,785] - Broken pipe from ('127.0.0.1', 56720)
+[16/Nov/2026 17:12:40,785] - Broken pipe from ('127.0.0.1', 55526)
+[16/Nov/2026 17:12:40,785] - Broken pipe from ('127.0.0.1', 58595)
+[16/Nov/2026 17:12:40,785] - Broken pipe from ('127.0.0.1', 49718)
+[16/Nov/2026 17:12:40,785] - Broken pipe from ('127.0.0.1', 50341)
+[16/Nov/2026 17:12:40,785] - Broken pipe from ('127.0.0.1', 53767)
+[16/Nov/2026 17:12:40,786] - Broken pipe from ('127.0.0.1', 63445)
+[16/Nov/2026 17:12:40,786] - Broken pipe from ('127.0.0.1', 63777)
+[16/Nov/2026 17:12:40,786] - Broken pipe from ('127.0.0.1', 51204)
+[16/Nov/2026 17:12:40,786] - Broken pipe from ('127.0.0.1', 50550)
+[16/Nov/2026 17:12:40,786] - Broken pipe from ('127.0.0.1', 59254)
+[16/Nov/2026 17:12:40,786] - Broken pipe from ('127.0.0.1', 63628)
 Destroying test database for alias 'default'...
 2 features passed, 0 failed, 0 skipped
 14 scenarios passed, 0 failed, 0 skipped
 121 steps passed, 0 failed, 0 skipped
-Took 0min 19.573s
+Took 0min 12.416s
+

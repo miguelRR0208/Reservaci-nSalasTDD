@@ -21,3 +21,8 @@ salas\apps.py                                                    4      0      0
 salas\models.py                                                 15      0      0      0   100%
 --------------------------------------------------------------------------------------------------------
 TOTAL                                                          236      0     36      0   100%
+
+$ coverage html
+
+Wrote HTML report to ../reportes/cobertura\index.html
+
